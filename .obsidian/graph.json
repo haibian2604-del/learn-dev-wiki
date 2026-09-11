@@ -1,0 +1,247 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "#rag",
+      "color": {
+        "a": 1,
+        "rgb": 14692657
+      }
+    },
+    {
+      "query": "#graphrag",
+      "color": {
+        "a": 1,
+        "rgb": 12723548
+      }
+    },
+    {
+      "query": "#mcp",
+      "color": {
+        "a": 1,
+        "rgb": 3890139
+      }
+    },
+    {
+      "query": "#langchain",
+      "color": {
+        "a": 1,
+        "rgb": 4350955
+      }
+    },
+    {
+      "query": "#skills",
+      "color": {
+        "a": 1,
+        "rgb": 15092096
+      }
+    },
+    {
+      "query": "#loop-engineering",
+      "color": {
+        "a": 1,
+        "rgb": 16213767
+      }
+    },
+    {
+      "query": "#harness",
+      "color": {
+        "a": 1,
+        "rgb": 14239759
+      }
+    },
+    {
+      "query": "#context-engineering",
+      "color": {
+        "a": 1,
+        "rgb": 820633
+      }
+    },
+    {
+      "query": "#react",
+      "color": {
+        "a": 1,
+        "rgb": 7358696
+      }
+    },
+    {
+      "query": "#workflow",
+      "color": {
+        "a": 1,
+        "rgb": 9926138
+      }
+    },
+    {
+      "query": "#agent",
+      "color": {
+        "a": 1,
+        "rgb": 16429061
+      }
+    },
+    {
+      "query": "#spring",
+      "color": {
+        "a": 1,
+        "rgb": 6727695
+      }
+    },
+    {
+      "query": "#java",
+      "color": {
+        "a": 1,
+        "rgb": 15844367
+      }
+    },
+    {
+      "query": "#mybatis",
+      "color": {
+        "a": 1,
+        "rgb": 829048
+      }
+    },
+    {
+      "query": "#transaction",
+      "color": {
+        "a": 1,
+        "rgb": 8675063
+      }
+    },
+    {
+      "query": "#design-pattern",
+      "color": {
+        "a": 1,
+        "rgb": 14037868
+      }
+    },
+    {
+      "query": "#interview",
+      "color": {
+        "a": 1,
+        "rgb": 11638780
+      }
+    },
+    {
+      "query": "#rate-limit",
+      "color": {
+        "a": 1,
+        "rgb": 16097024
+      }
+    },
+    {
+      "query": "#high-availability",
+      "color": {
+        "a": 1,
+        "rgb": 16749099
+      }
+    },
+    {
+      "query": "#system-design",
+      "color": {
+        "a": 1,
+        "rgb": 16769126
+      }
+    },
+    {
+      "query": "#docker",
+      "color": {
+        "a": 1,
+        "rgb": 1087661
+      }
+    },
+    {
+      "query": "#kubernetes",
+      "color": {
+        "a": 1,
+        "rgb": 1867478
+      }
+    },
+    {
+      "query": "#container",
+      "color": {
+        "a": 1,
+        "rgb": 2275535
+      }
+    },
+    {
+      "query": "#devops",
+      "color": {
+        "a": 1,
+        "rgb": 1419967
+      }
+    },
+    {
+      "query": "#coding-habits",
+      "color": {
+        "a": 1,
+        "rgb": 10510618
+      }
+    },
+    {
+      "query": "#vector-db",
+      "color": {
+        "a": 1,
+        "rgb": 16612884
+      }
+    },
+    {
+      "query": "#python",
+      "color": {
+        "a": 1,
+        "rgb": 6241732
+      }
+    },
+    {
+      "query": "path:01-Wiki/summaries",
+      "color": {
+        "a": 1,
+        "rgb": 15764480
+      }
+    },
+    {
+      "query": "path:01-Wiki/entities",
+      "color": {
+        "a": 1,
+        "rgb": 1667522
+      }
+    },
+    {
+      "query": "path:01-Wiki/concepts",
+      "color": {
+        "a": 1,
+        "rgb": 3120708
+      }
+    },
+    {
+      "query": "path:02-Rules",
+      "color": {
+        "a": 1,
+        "rgb": 10237621
+      }
+    },
+    {
+      "query": "path:00-Raw",
+      "color": {
+        "a": 1,
+        "rgb": 8818326
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": true,
+  "centerStrength": 0.518713248970312,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 0.9341451751361286,
+  "close": true
+}
