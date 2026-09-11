@@ -3,8 +3,8 @@ type: concept
 domain: tech
 tags: [agent]
 created: 2026-08-27
-updated: 2026-08-27
-sources: ["[[01-Wiki/summaries/单 Agent 和多 Agent 的边界]]"]
+updated: 2026-09-11
+sources: ["[[01-Wiki/summaries/单 Agent 和多 Agent 的边界]]", "[[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]"]
 status: growing
 ---
 
@@ -58,3 +58,5 @@ status: growing
 - 上游：[[01-Wiki/concepts/AI Agent]]、[[01-Wiki/concepts/Workflow Graph]]
 - 实战来源：[[01-Wiki/summaries/单 Agent 和多 Agent 的边界]]
 - 相关：[[01-Wiki/concepts/Loop Engineering]]（协作停止条件）
+- 补充：[[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]（Q9/Q18/Q32/Q34/Q36 补**协作机制六形态**——Supervisor/流水线/辩论投票/黑板/群聊/招标，以及误差级联、收敛机制、异步一致性的工程解法）
+- 另见：[[01-Wiki/concepts/A2A 协议]]（跨组织协作的协议层）、[[01-Wiki/concepts/Agent 记忆系统]]（多 Agent 的上下文解耦动机）

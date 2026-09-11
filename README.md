@@ -3,8 +3,8 @@
 > 个人技术知识库：以 [Karpathy LLM Wiki](https://github.com/karpathy) 方法论搭建的 **Obsidian vault**。
 > 原始资料冻结存档，Wiki 页由 LLM 全权维护，分类规则写入 schema 层。
 
-- **源文件**：73 篇（17 个知识点文件夹）
-- **Wiki 页面**：141 页（73 摘要 / 25 实体 / 43 概念）
+- **源文件**：74 篇（18 个知识点文件夹）
+- **Wiki 页面**：145 页（74 摘要 / 25 实体 / 46 概念）
 - **远端仓库**：`git@github.com:haibian2604-del/learn-dev-wiki.git`
 
 ---
@@ -15,7 +15,7 @@
 my-knowledge/                    # Obsidian vault = 一个普通文件夹
 ├── 00-Raw/                      # RAW 层：内容不可变，只读；按知识点分文件夹
 │   ├── inbox/                   #   新源文件暂存区，ingest 前放这里
-│   ├── <knowledge-point>/       #   17 个知识点文件夹（见下表）
+│   ├── <knowledge-point>/       #   18 个知识点文件夹（见下表）
 │   └── README.md                #   本层使用说明 + 目录清单
 ├── 01-Wiki/                     # WIKI 层：LLM 全权维护
 │   ├── index.md                 #   内容索引（回答查询先读这里）
@@ -39,7 +39,7 @@ my-knowledge/                    # Obsidian vault = 一个普通文件夹
 
 ---
 
-## 二、00-Raw 知识点目录（17 个）
+## 二、00-Raw 知识点目录（18 个）
 
 不同知识点的源文件放入不同文件夹；出现**全新知识点**则新建文件夹并登记到 [[02-Rules/分类体系]] §9。
 
@@ -49,11 +49,12 @@ my-knowledge/                    # Obsidian vault = 一个普通文件夹
 | `agent-engineering/` | Agent 工程化 | 6 | | `rag/` | RAG 与检索 | 8 |
 | `agent-training/` | Agent 训练与评测 | 7 | | `vector-db/` | 向量数据库 | 2 |
 | `agent-frameworks/` | 框架全景与选型 | 4 | | `llamaindex/` | LlamaIndex | 6 |
-| `context-engineering/` | 上下文工程 | 3 | | `java-backend/` | Java 后端 | 6 |
-| `harness/` | Harness Engineering | 2 | | `system-design/` | 系统设计与高可用 | 2 |
-| `loop-engineering/` | Loop Engineering | 5 | | `devops/` | Docker / K8s | 3 |
-| `mcp/` | MCP 协议与开发 | 5 | | `coding-habits/` | 工程素养 | 1 |
-| `academic/` | 学术论文 | 1 | | `inbox/` | 暂存区（未分类） | — |
+| `agent-interview/` | Agent 面试题库与考点 | 1 | | `java-backend/` | Java 后端 | 6 |
+| `context-engineering/` | 上下文工程 | 3 | | `system-design/` | 系统设计与高可用 | 2 |
+| `harness/` | Harness Engineering | 2 | | `devops/` | Docker / K8s | 3 |
+| `loop-engineering/` | Loop Engineering | 5 | | `coding-habits/` | 工程素养 | 1 |
+| `mcp/` | MCP 协议与开发 | 5 | | `academic/` | 学术论文 | 1 |
+| `inbox/` | 暂存区（未分类） | — | | | | |
 
 ---
 

@@ -3,8 +3,8 @@ type: concept
 domain: tech
 tags: [agent]
 created: 2026-08-27
-updated: 2026-08-27
-sources: ["[[01-Wiki/summaries/Agent 评估：怎么知道你的 Agent 好不好]]", "[[01-Wiki/summaries/Agent 评测：怎么衡量你训练出来的 Agent 到底行不行]]"]
+updated: 2026-09-11
+sources: ["[[01-Wiki/summaries/Agent 评估：怎么知道你的 Agent 好不好]]", "[[01-Wiki/summaries/Agent 评测：怎么衡量你训练出来的 Agent 到底行不行]]", "[[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]"]
 status: mature
 ---
 
@@ -56,3 +56,5 @@ status: mature
 - 上游：[[01-Wiki/concepts/AI Agent]]、[[01-Wiki/concepts/Loop Engineering]]
 - 实战来源：[[01-Wiki/summaries/Agent 评估：怎么知道你的 Agent 好不好]]、[[01-Wiki/summaries/Agent 评测：怎么衡量你训练出来的 Agent 到底行不行]]
 - 相关：[[01-Wiki/concepts/Harness Engineering]]、[[01-Wiki/concepts/Agent 训练环境]]（评测环境与门禁）
+- 补充：[[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]（Q33 补 Prompt 优化效果的判定方法与指标分层；Q37 补 LLM-as-Judge/环境真值/红队六种方法；Q48 补**鲁棒性对抗测试清单**与 fail-safe 目标）
+- 另见：[[01-Wiki/concepts/Agent 安全与对齐]]（安全维度的系统层落地）

@@ -264,3 +264,30 @@
 - **更新文档**：[[02-Rules/AGENTS.md]]（铁律/架构图/ingest 归档步骤）、[[02-Rules/分类体系]]（§1 原则 + 新增 §9 知识点目录规范）、[[00-Raw/README.md]]（目录清单）、根 [[AGENTS.md]]（速览）
 - **备份**：重组前已打包 `/tmp/my-knowledge-backup-20260911-102601.tar.gz`
 - **待办**：根目录 `Clippings/` 有 1 篇新剪藏「AgentGuidedocs04-interview02-rag-questions」待 ingest
+
+## [2026-09-11] ingest | AI Agent 面试题库 - Agent 核心篇（52 题）
+
+- 源文件：`Clippings/AgentGuidedocs04-interview02-rag-questions.md at main.md` → 归档至 `00-Raw/agent-interview/AI Agent 面试题库 - Agent 核心篇.md`
+  - **新建知识点夹** `00-Raw/agent-interview/`（第 18 个），已登记 [[02-Rules/分类体系]] §9.1 + `00-Raw/README.md` + 根 [[README.md]]
+  - **重命名**：原文件名带 URL 残留（`... at main.md`），归档时改为文档标题；`Clippings/` 现已清空
+  - ⚠️ 归档前已在源文件内**逐题补写参考答案**（52 题，1354 行 / ~75 KB），源文件内容自此冻结
+- 来源：https://github.com/adongwanai/AgentGuide（docs/04-interview/）
+- 新增摘要页 ×1：[[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]（domain=tech，tags=agent/interview，status=growing）
+- 新增概念页 ×3（均为 wiki 此前的**空白领域**）：
+  - [[01-Wiki/concepts/Agent 记忆系统]]（五层划分 / 读写链路 / **记忆衰减七机制** / 海量历史查询三招）
+  - [[01-Wiki/concepts/Agent 安全与对齐]]（纵深防御七层 / 三条底线 / 隐私越权双解法 / **间接注入**）
+  - [[01-Wiki/concepts/A2A 协议]]（Agent Card/Task/Artifact、与 MCP 的纵横分工，status=seedling）
+- 更新已有概念页 ×5（加交叉引用 + 补内容提要 + sources 递增）：
+  - [[01-Wiki/concepts/ReAct]]（×1→×2）：补规划方法谱系 CoT→Self-Consistency→ToT→GoT
+  - [[01-Wiki/concepts/Tool Calling]]（×2→×3）：补失败反馈策略 / 工具选择打分 / 约束解码 / FC vs Toolformer
+  - [[01-Wiki/concepts/单 Agent 与多 Agent]]（×1→×2）：补协作机制六形态与收敛容错
+  - [[01-Wiki/concepts/Agent 评估]]（×2→×3）：补 Prompt 优化判定 + 鲁棒性对抗测试清单
+  - [[01-Wiki/concepts/GraphRAG]]（×5→×6）：补图谱增量更新与实时性保障
+- 已同步更新 [[01-Wiki/index.md]]（+1 摘要 / +3 概念 / 5 条目升级 / 待办区新增 4 条缺口）
+- 标签 `agent`/`interview` 配色已在 `.obsidian/graph.json` 与 `wiki-colors.css` 登记，无需新增
+
+### ⚠️ 本批记录的三处资料偏差
+
+1. **源文件命名与内容不符**：剪藏文件名与 frontmatter `title` 为 `02-rag-questions.md`，正文实为 **Agent 核心篇**，而 frontmatter `source` 又指向 `03-agent-questions.md`——剪藏器串号，已在摘要页标注
+2. **原文仅有题面、无任何答案**：52 题答案为本次补写，属**二次加工内容**而非原始资料；后续引用需区分「题目来自 AgentGuide，答案来自本 wiki」
+3. **题目无项目背景**：Q6/Q23/Q42 等"你有没有做过"类题目，标准答法与实际答法差异极大，摘要页已提示

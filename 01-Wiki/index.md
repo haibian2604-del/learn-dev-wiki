@@ -103,6 +103,7 @@ GROUP BY domain
 - [[01-Wiki/summaries/架构师AI杜 Day35 Agent基础概念|架构师AI杜 Day35 Agent基础概念]] — 经典理论视角：五特征、Agent=<Perception,Reasoning,Action,Learning>、三轴分类（能力/数量/目标）、四核心组件（2026-09-04，来源 ×1）
 - [[01-Wiki/summaries/架构师AI杜 Day38 LangChain框架上|架构师AI杜 Day38 LangChain框架（上）]] — Models/Prompts/Output Parsers 三组件、Simple-Sequential-Router 三级链、ReAct Agent、自定义工具两种写法 ⚠️ 0.1.x 旧版 API（2026-09-04，来源 ×1）
 - [[01-Wiki/summaries/架构师AI杜 Day39 LangChain框架下|架构师AI杜 Day39 LangChain框架（下）]] — 四种高级 Agent 模式、五种 Memory 策略、Callback 九钩子、自定义 Parser、缓存/异步/批量/流式四招 ⚠️ 含 eval 安全反例（2026-09-04，来源 ×1）
+- [[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇|AI Agent 面试题库 - Agent 核心篇]] — 52 道 Agent 岗面试题（标注字节/阿里/腾讯高频与真题）：七大部分结构、八大模块的标准答法要点、工程题"分层+量化"套路（2026-09-11，来源 ×1）
 
 ## 🏛️ 实体 (Entities) — `01-Wiki/entities/`
 
@@ -140,7 +141,7 @@ GROUP BY domain
 - [[01-Wiki/concepts/MCP|MCP]] — 模型上下文协议：外部能力标准化接入层 + 手写 Server 实现视角与官方规范出入对照表（2026-09-04，来源 ×2）
 - [[01-Wiki/concepts/Agent Skills|Agent Skills]] — 程序性知识封装：渐进式披露三层架构、SKILL.md 规范（2026-07-31，来源 ×1）
 - [[01-Wiki/concepts/上下文工程|上下文工程]] — 推理阶段上下文策划：上下文腐蚀、GSSC、JIT、Context/State/Memory 区分、Skills 三层与 Status Bar（2026-08-27，来源 ×3）
-- [[01-Wiki/concepts/ReAct|ReAct]] — 思考-行动-观察循环范式，与 Plan-and-Solve/Reflection 对比（2026-07-31，来源 ×1）
+- [[01-Wiki/concepts/ReAct|ReAct]] — 思考-行动-观察循环范式，与 Plan-and-Solve/Reflection 对比；补规划方法谱系 CoT→Self-Consistency→ToT→GoT 与难度路由（2026-09-11，来源 ×2）
 - [[01-Wiki/concepts/Harness Engineering|Harness Engineering]] — Agent=Model+Harness 六层架构 + 三大支柱/十哲学/ROI/Claude Code 参考实现 + Loop/Harness/Infra 边界与六层 Infra（2026-08-27，来源 ×5）
 - [[01-Wiki/concepts/Workflow Graph|Workflow Graph]] — DAG+循环边建模 vs 自由循环 ReAct（2026-07-31，来源 ×1）
 - [[01-Wiki/concepts/IoC|IoC]] — 控制反转思想：对象创建权交给容器，DI 是其实现（2026-07-31，来源 ×2）
@@ -149,14 +150,14 @@ GROUP BY domain
 - [[01-Wiki/concepts/Docker|Docker]] — 轻量容器技术：镜像/容器/仓库，一次构建到处运行（2026-07-31，来源 ×2）
 - [[01-Wiki/concepts/Kubernetes|Kubernetes]] — 容器编排：Pod/Deployment/Service、控制器模式（2026-07-31，来源 ×2）
 - [[01-Wiki/concepts/Loop Engineering|Loop Engineering]] — 循环质量控制 + 系统定义/Open-Loop vs Closed-Loop/与 Harness·Vibe Coding 辨析 + 四 Loop 模式与退出设计（2026-08-27，来源 ×4）
-- [[01-Wiki/concepts/GraphRAG|GraphRAG]] — 知识图谱增强 RAG：三阶段流程、方法论三分、前沿框架、评估与生产挑战（2026-08-01，来源 ×5）
+- [[01-Wiki/concepts/GraphRAG|GraphRAG]] — 知识图谱增强 RAG：三阶段流程、方法论三分、前沿框架、评估与生产挑战 + 图谱增量更新与实时性保障（2026-09-11，来源 ×6）
 - [[01-Wiki/concepts/知识图谱|知识图谱]] — 节点+边的语义网络，显式关系、多跳推理、本体/溯源/时间建模（2026-08-01，来源 ×2）
 - [[01-Wiki/concepts/查询路由|查询路由]] — 按复杂度选策略：传统混合/图RAG/组合，RRF 融合与降级（2026-08-01，来源 ×1）
 - [[01-Wiki/concepts/实体关系抽取|实体关系抽取]] — LLM 抽取三元组→CSV→导入图库，图谱构建第一步（2026-08-01，来源 ×1）
 - [[01-Wiki/concepts/向量数据库|向量数据库]] — 高维向量存储检索、ANN 算法(HNSW/IVF/DiskANN)、与传统 DB 区别（2026-08-01，来源 ×1）
 - [[01-Wiki/concepts/AI Agent|AI Agent]] — 感知→决策→行动→记忆闭环、6 大模块、3 大协议、工程视角最小定义与 7 模块/Workflow 边界/生产断层 + 进阶章节导航 06-17 + 经典理论视角（四元组/三轴分类）（2026-09-04，来源 ×9）
-- [[01-Wiki/concepts/Tool Calling|Tool Calling]] — Agent 与大模型 API 交互核心：无状态 API、消息角色、工具调用闭环≥2请求、call ID 因果、并行/流式 + 工具设计八原则与参数验证五闸门（2026-09-04，来源 ×2）
-- [[01-Wiki/concepts/Agent 评估|Agent 评估]] — 四维度(完成率/效率/安全/鲁棒)、四评测方法(测试集/LLM-as-Judge/A-B/Red Teaming)、持续监控 + 训练评测四层指标/防泄露（2026-08-27，来源 ×2）
+- [[01-Wiki/concepts/Tool Calling|Tool Calling]] — Agent 与大模型 API 交互核心：无状态 API、消息角色、工具调用闭环≥2请求、call ID 因果、并行/流式 + 工具设计八原则与参数验证五闸门 + 失败反馈策略/工具选择打分/Function Calling vs Toolformer（2026-09-11，来源 ×3）
+- [[01-Wiki/concepts/Agent 评估|Agent 评估]] — 四维度(完成率/效率/安全/鲁棒)、四评测方法(测试集/LLM-as-Judge/A-B/Red Teaming)、持续监控 + 训练评测四层指标/防泄露 + 鲁棒性对抗测试清单与 fail-safe（2026-09-11，来源 ×3）
 - [[01-Wiki/concepts/Coding Agent|Coding Agent]] — 落地最成功 Agent 形态：外部验证器/代码即工具/结构化上下文/失败可控 + 三工程模式（2026-08-27，来源 ×1）
 - [[01-Wiki/concepts/Agent 自进化|Agent 自进化]] — 不改权重的运行时自改进：经验学习/工具创造/策略自优化 + 风险约束（2026-08-27，来源 ×1）
 - [[01-Wiki/concepts/异步 Agent 与事件驱动架构|异步 Agent 与事件驱动架构]] — 三异步模式、事件驱动、Safety Sidecar、工具三层隔离、Correlation ID（2026-08-27，来源 ×1）
@@ -167,7 +168,7 @@ GROUP BY domain
 - [[01-Wiki/concepts/Agent 训练数据|Agent 训练数据]] — 六类数据配比、能力偏移、模型越小越保守、质量>数量、数据飞轮（2026-08-27，来源 ×1）
 - [[01-Wiki/concepts/Agent 模型部署|Agent 模型部署]] — checkpoint 选择/量化(INT8 默认)/KV Cache/Agent Runtime/循环硬限制/灰度监控（2026-08-27，来源 ×1）
 - [[01-Wiki/concepts/Agent 训练环境|Agent 训练环境]] — 四平面闭环、环境契约、沙箱四硬规则、Verifier 隔离、数据回流保证据（2026-08-27，来源 ×1）
-- [[01-Wiki/concepts/单 Agent 与多 Agent|单 Agent 与多 Agent]] — 单 Agent 优先、三协作模式、上下文选择性共享、涌现行为（2026-08-27，来源 ×1）
+- [[01-Wiki/concepts/单 Agent 与多 Agent|单 Agent 与多 Agent]] — 单 Agent 优先、三协作模式、上下文选择性共享、涌现行为 + 协作机制六形态与收敛容错机制（2026-09-11，来源 ×2）
 - [[01-Wiki/concepts/时空可组合性|时空可组合性]] — 动态组合双维度：可逆效应(时间)+响应式余效应(空间)、组件演算（2026-08-15，来源 ×1）
 - [[01-Wiki/concepts/Query Engine|Query Engine]] — LlamaIndex 检索+合成指挥中心：Retriever+Synthsizer、4 合成模式、请求生命周期（2026-08-19，来源 ×1）
 - [[01-Wiki/concepts/混合检索|混合检索]] — 向量(dense)+BM25(sparse) 协同，RRF 融合、权重调优（2026-08-19，来源 ×1）
@@ -177,6 +178,9 @@ GROUP BY domain
 - [[01-Wiki/concepts/嵌入模型|嵌入模型]] — 语义指纹，模型选型/误区/领域微调，决定检索天花板（2026-08-19，来源 ×1）
 - [[01-Wiki/concepts/MCP Server 开发|MCP Server 开发]] — 协议落地：Server 六组件、工具元数据与执行函数解耦、错误转返回值、鉴权三层粒度、路径白名单与注入防护（2026-09-04，来源 ×2）
 - [[01-Wiki/concepts/LangChain 组件与 Agent 模式|LangChain 组件与 Agent 模式]] — Chains 三形态、Memory 五策略、Callback 九钩子、四种 Agent 模式、性能四招 ⚠️ 旧版 API 与 eval 安全反例（2026-09-04，来源 ×2）
+- [[01-Wiki/concepts/Agent 记忆系统|Agent 记忆系统]] — 五层记忆划分、写入/读取双链路、**记忆衰减七机制**、海量历史查询三招(减数据/缩空间/快索引)（2026-09-11，来源 ×1）
+- [[01-Wiki/concepts/Agent 安全与对齐|Agent 安全与对齐]] — 纵深防御七层、三条底线(拦住/看见/撤销)、隐私与越权双解法、间接 Prompt 注入（2026-09-11，来源 ×1）
+- [[01-Wiki/concepts/A2A 协议|A2A 协议]] — 跨厂商 Agent 互操作协议：Agent Card/Task/Artifact、与 MCP 的纵横分工（agent↔agent vs agent↔工具）（2026-09-11，来源 ×1）
 
 ## 📋 待办与缺口 (Open Questions)
 
@@ -190,6 +194,10 @@ GROUP BY domain
 - `eval` / `python-repl` 类代码执行工具的安全替代方案：AST 白名单解析 vs 容器沙箱 vs 受限 DSL（多份教程直接 `eval` 模型输出，是系统性风险，见 [[01-Wiki/concepts/LangChain 组件与 Agent 模式]]）
 - LangChain 0.1.x → LCEL / LangGraph 的迁移路径与成本（多份资料停留在 `LLMChain` + `initialize_agent` 旧版写法）
 - 工具数量规模化后的按需加载机制（Tool RAG）：几十上百个工具时全量 `tools/list` 会撑爆上下文
+- **A2A 协议规范细节**（Agent Card / Task / Artifact 字段定义 + 跨组织落地案例）——已建 [[01-Wiki/concepts/A2A 协议]]，**规范层与实战案例仍缺**（2026-09-11）
+- **工具选择打分（tool router）** 的公开数据集与 baseline（2026-09-11）
+- **间接 Prompt 注入**（工具返回内容藏指令）的检测率/误杀率基准（2026-09-11）
+- **Agent 记忆衰减参数**的量化标定（时间衰减因子 / importance 阈值如何用评测集标定）（2026-09-11）
 
 ## 维护约定
 

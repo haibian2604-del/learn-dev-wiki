@@ -14,6 +14,7 @@
 ├── agent-engineering/   # Agent 工程化（Infra/评估/Coding/多模态/自进化/异步）
 ├── agent-training/      # Agent 训练与评测（SFT/RL/数据/部署）
 ├── agent-frameworks/    # Agent 框架全景与选型（含 LangChain）
+├── agent-interview/     # Agent 面试题库与考点（跨子域）
 ├── context-engineering/ # 上下文工程
 ├── harness/             # Harness Engineering
 ├── loop-engineering/    # Loop Engineering

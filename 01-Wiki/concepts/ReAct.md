@@ -3,8 +3,8 @@ type: concept
 domain: tech
 tags: [agent, react, llm]
 created: 2026-07-31
-updated: 2026-07-31
-sources: ["[[01-Wiki/summaries/第四章 智能体经典范式构建]]"]
+updated: 2026-09-11
+sources: ["[[01-Wiki/summaries/第四章 智能体经典范式构建]]", "[[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]"]
 status: growing
 ---
 
@@ -54,3 +54,4 @@ status: growing
 - [[01-Wiki/concepts/MCP]]（工具接入层）、[[01-Wiki/concepts/Agent Skills]]（知识层）
 - [[01-Wiki/entities/LangChain]]（create_tool_calling_agent 框架化实现）
 - [[01-Wiki/concepts/上下文工程]]（ReAct 循环中历史管理属于上下文工程范畴）
+- 补充：[[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]（Q2/Q3 补规划方法谱系 CoT → Self-Consistency → ToT → GoT，以及"精度提升与 token 成本近似线性"故需**难度路由**的结论）

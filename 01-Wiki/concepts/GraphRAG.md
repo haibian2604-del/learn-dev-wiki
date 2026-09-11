@@ -3,8 +3,8 @@ type: concept
 domain: tech
 tags: [graphrag]
 created: 2026-08-01
-updated: 2026-08-01
-sources: ["[[01-Wiki/summaries/基于知识图谱的RAG]]", "[[01-Wiki/summaries/图RAG架构设计]]", "[[01-Wiki/summaries/图数据建模与准备]]", "[[01-Wiki/summaries/Milvus索引构建]]", "[[01-Wiki/summaries/智能查询路由与检索策略]]"]
+updated: 2026-09-11
+sources: ["[[01-Wiki/summaries/基于知识图谱的RAG]]", "[[01-Wiki/summaries/图RAG架构设计]]", "[[01-Wiki/summaries/图数据建模与准备]]", "[[01-Wiki/summaries/Milvus索引构建]]", "[[01-Wiki/summaries/智能查询路由与检索策略]]", "[[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]"]
 status: growing
 ---
 
@@ -70,3 +70,4 @@ GraphRAG = 传统 [[01-Wiki/concepts/RAG]] + [[01-Wiki/concepts/知识图谱]]�
 - [[01-Wiki/concepts/知识图谱]]（底层结构）、[[01-Wiki/concepts/RAG]]（母体）
 - [[01-Wiki/concepts/查询路由]]（按复杂度选策略）、[[01-Wiki/concepts/实体关系抽取]]（图谱构建第一步）
 - 实体：[[01-Wiki/entities/Neo4j]]（图存储）、[[01-Wiki/entities/Milvus]]（向量索引）
+- 补充：[[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]（Q14 补**图谱更新的机制与实时性**：抽取→对齐消歧→upsert 合并→冲突消解，事件驱动/CDC 只更子图、读写分离、最终一致 + 版本号）
