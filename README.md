@@ -3,8 +3,8 @@
 > 个人技术知识库：以 [Karpathy LLM Wiki](https://github.com/karpathy) 方法论搭建的 **Obsidian vault**。
 > 原始资料冻结存档，Wiki 页由 LLM 全权维护，分类规则写入 schema 层。
 
-- **源文件**：74 篇（18 个知识点文件夹）
-- **Wiki 页面**：145 页（74 摘要 / 25 实体 / 46 概念）
+- **源文件**：76 篇（18 个知识点文件夹）
+- **Wiki 页面**：150 页（76 摘要 / 25 实体 / 49 概念）
 - **远端仓库**：`git@github.com:haibian2604-del/learn-dev-wiki.git`
 
 ---
@@ -49,7 +49,7 @@ my-knowledge/                    # Obsidian vault = 一个普通文件夹
 | `agent-engineering/` | Agent 工程化 | 6 | | `rag/` | RAG 与检索 | 8 |
 | `agent-training/` | Agent 训练与评测 | 7 | | `vector-db/` | 向量数据库 | 2 |
 | `agent-frameworks/` | 框架全景与选型 | 4 | | `llamaindex/` | LlamaIndex | 6 |
-| `agent-interview/` | Agent 面试题库与考点 | 1 | | `java-backend/` | Java 后端 | 6 |
+| `agent-interview/` | Agent 面试题库与考点 | 3 | | `java-backend/` | Java 后端 | 6 |
 | `context-engineering/` | 上下文工程 | 3 | | `system-design/` | 系统设计与高可用 | 2 |
 | `harness/` | Harness Engineering | 2 | | `devops/` | Docker / K8s | 3 |
 | `loop-engineering/` | Loop Engineering | 5 | | `coding-habits/` | 工程素养 | 1 |

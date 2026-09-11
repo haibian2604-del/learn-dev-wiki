@@ -4,7 +4,7 @@ domain: tech
 tags: [agent, security]
 created: 2026-09-11
 updated: 2026-09-11
-sources: ["[[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]"]
+sources: ["[[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]", "[[01-Wiki/summaries/AI Agent 面试题库 - RAG 系统篇]]", "[[01-Wiki/summaries/开发岗专项面试题库]]"]
 status: growing
 ---
 
@@ -72,3 +72,4 @@ status: growing
 - [[01-Wiki/concepts/Agent 评估]]（安全维度指标）、[[01-Wiki/concepts/异步 Agent 与事件驱动架构]]（Safety Sidecar）
 - [[01-Wiki/concepts/限流]]（限额与频次控制）
 - [[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]
+- 补充：[[01-Wiki/summaries/开发岗专项面试题库]]（四-Q5 权限读写分级、四-Q6 隐私生命周期、一-Q10 多租户**强制过滤**防跨租户泄露）、[[01-Wiki/summaries/AI Agent 面试题库 - RAG 系统篇]]（Q22 搜索结果降噪与间接注入防护）

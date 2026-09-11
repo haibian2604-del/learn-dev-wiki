@@ -3,8 +3,8 @@ type: concept
 domain: tech
 tags: [langchain, agent]
 created: 2026-09-04
-updated: 2026-09-04
-sources: ["[[01-Wiki/summaries/架构师AI杜 Day38 LangChain框架上]]", "[[01-Wiki/summaries/架构师AI杜 Day39 LangChain框架下]]"]
+updated: 2026-09-11
+sources: ["[[01-Wiki/summaries/架构师AI杜 Day38 LangChain框架上]]", "[[01-Wiki/summaries/架构师AI杜 Day39 LangChain框架下]]", "[[01-Wiki/summaries/开发岗专项面试题库]]"]
 status: growing
 ---
 
@@ -110,3 +110,4 @@ Output Parser 的工作方式值得一提：先 `get_format_instructions()` 把�
 - [[01-Wiki/concepts/上下文工程]]（Memory 五策略的本质是上下文组织）
 - [[01-Wiki/concepts/Agent 评估]]（token 与耗时统计是成本效率评估基础）
 - 相关实体：[[01-Wiki/entities/LangChain]]、[[01-Wiki/entities/LangGraph]]（图基编排，当前推荐路径）、[[01-Wiki/entities/架构师AI杜]]（本页主要来源系列）
+- 补充：[[01-Wiki/summaries/开发岗专项面试题库]]（三-Q1/Q6 框架选型判据、三-Q3 Memory 框架选型）

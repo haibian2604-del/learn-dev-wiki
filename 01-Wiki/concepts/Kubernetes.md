@@ -3,8 +3,8 @@ type: concept
 domain: tech
 tags: [kubernetes, container, devops]
 created: 2026-07-31
-updated: 2026-07-31
-sources: ["[[01-Wiki/summaries/Kubernetes超详细教程]]", "[[01-Wiki/summaries/Docker与K8s对比]]"]
+updated: 2026-09-11
+sources: ["[[01-Wiki/summaries/Kubernetes超详细教程]]", "[[01-Wiki/summaries/Docker与K8s对比]]", "[[01-Wiki/summaries/开发岗专项面试题库]]"]
 status: growing
 ---
 
@@ -50,3 +50,4 @@ K8s 解决 Docker 解决不了的问题：**集群层面**的容器管理——�
 
 - [[01-Wiki/concepts/Docker]]（运行时基础）
 - [[01-Wiki/summaries/Kubernetes超详细教程]]（搭建与实战）
+- 补充：[[01-Wiki/summaries/开发岗专项面试题库]]（一-Q5 分布式 Agent 调度、三-Q10 监控方案选型）

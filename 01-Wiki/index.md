@@ -104,6 +104,8 @@ GROUP BY domain
 - [[01-Wiki/summaries/架构师AI杜 Day38 LangChain框架上|架构师AI杜 Day38 LangChain框架（上）]] — Models/Prompts/Output Parsers 三组件、Simple-Sequential-Router 三级链、ReAct Agent、自定义工具两种写法 ⚠️ 0.1.x 旧版 API（2026-09-04，来源 ×1）
 - [[01-Wiki/summaries/架构师AI杜 Day39 LangChain框架下|架构师AI杜 Day39 LangChain框架（下）]] — 四种高级 Agent 模式、五种 Memory 策略、Callback 九钩子、自定义 Parser、缓存/异步/批量/流式四招 ⚠️ 含 eval 安全反例（2026-09-04，来源 ×1）
 - [[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇|AI Agent 面试题库 - Agent 核心篇]] — 52 道 Agent 岗面试题（标注字节/阿里/腾讯高频与真题）：七大部分结构、八大模块的标准答法要点、工程题"分层+量化"套路（2026-09-11，来源 ×1）
+- [[01-Wiki/summaries/AI Agent 面试题库 - RAG 系统篇|AI Agent 面试题库 - RAG 系统篇]] — 22 道 RAG 岗面试题（含字节/美团真题）：核心原理/检索优化/评估/工程实践/进阶范式五部分，八大高频考点的标准答法（2026-09-11，来源 ×1）
+- [[01-Wiki/summaries/开发岗专项面试题库|开发岗专项面试题库]] — 45 道开发岗面试题（系统设计 15/工程实践 12/框架选型 10/业务落地 8）：按真实 JD 三层考察点组织，含带 SLA 数字的容量规划与 ROI 归因（2026-09-11，来源 ×1）
 
 ## 🏛️ 实体 (Entities) — `01-Wiki/entities/`
 
@@ -135,8 +137,8 @@ GROUP BY domain
 
 ## 💡 概念 (Concepts) — `01-Wiki/concepts/`
 
-- [[01-Wiki/concepts/RAG|RAG]] — 先检索再生成的 LLM 架构，两阶段流程与方案对比（2026-07-31，来源 ×1）
-- [[01-Wiki/concepts/文本分块|文本分块]] — chunking 策略与分割器、关键参数（2026-07-31，来源 ×1）
+- [[01-Wiki/concepts/RAG|RAG]] — 先检索再生成的 LLM 架构，两阶段流程与方案对比（2026-09-11，来源 ×5）
+- [[01-Wiki/concepts/文本分块|文本分块]] — chunking 策略与分割器、关键参数（2026-09-11，来源 ×2）
 - [[01-Wiki/concepts/Document|Document]] — LangChain 统一文档对象：page_content + metadata（2026-07-31，来源 ×1）
 - [[01-Wiki/concepts/MCP|MCP]] — 模型上下文协议：外部能力标准化接入层 + 手写 Server 实现视角与官方规范出入对照表（2026-09-04，来源 ×2）
 - [[01-Wiki/concepts/Agent Skills|Agent Skills]] — 程序性知识封装：渐进式披露三层架构、SKILL.md 规范（2026-07-31，来源 ×1）
@@ -146,41 +148,44 @@ GROUP BY domain
 - [[01-Wiki/concepts/Workflow Graph|Workflow Graph]] — DAG+循环边建模 vs 自由循环 ReAct（2026-07-31，来源 ×1）
 - [[01-Wiki/concepts/IoC|IoC]] — 控制反转思想：对象创建权交给容器，DI 是其实现（2026-07-31，来源 ×2）
 - [[01-Wiki/concepts/AOP|AOP]] — 面向切面编程：横切关注点分离，动态代理实现（2026-07-31，来源 ×2）
-- [[01-Wiki/concepts/限流|限流]] — 固定/滑动窗口、令牌桶、漏桶与分布式实现（2026-07-31，来源 ×2）
+- [[01-Wiki/concepts/限流|限流]] — 固定/滑动窗口、令牌桶、漏桶与分布式实现（2026-09-11，来源 ×3）
 - [[01-Wiki/concepts/Docker|Docker]] — 轻量容器技术：镜像/容器/仓库，一次构建到处运行（2026-07-31，来源 ×2）
-- [[01-Wiki/concepts/Kubernetes|Kubernetes]] — 容器编排：Pod/Deployment/Service、控制器模式（2026-07-31，来源 ×2）
+- [[01-Wiki/concepts/Kubernetes|Kubernetes]] — 容器编排：Pod/Deployment/Service、控制器模式（2026-09-11，来源 ×3）
 - [[01-Wiki/concepts/Loop Engineering|Loop Engineering]] — 循环质量控制 + 系统定义/Open-Loop vs Closed-Loop/与 Harness·Vibe Coding 辨析 + 四 Loop 模式与退出设计（2026-08-27，来源 ×4）
-- [[01-Wiki/concepts/GraphRAG|GraphRAG]] — 知识图谱增强 RAG：三阶段流程、方法论三分、前沿框架、评估与生产挑战 + 图谱增量更新与实时性保障（2026-09-11，来源 ×6）
+- [[01-Wiki/concepts/GraphRAG|GraphRAG]] — 知识图谱增强 RAG：三阶段流程、方法论三分、前沿框架、评估与生产挑战 + 图谱增量更新与实时性保障（2026-09-11，来源 ×7）
 - [[01-Wiki/concepts/知识图谱|知识图谱]] — 节点+边的语义网络，显式关系、多跳推理、本体/溯源/时间建模（2026-08-01，来源 ×2）
-- [[01-Wiki/concepts/查询路由|查询路由]] — 按复杂度选策略：传统混合/图RAG/组合，RRF 融合与降级（2026-08-01，来源 ×1）
+- [[01-Wiki/concepts/查询路由|查询路由]] — 按复杂度选策略：传统混合/图RAG/组合，RRF 融合与降级（2026-09-11，来源 ×2）
 - [[01-Wiki/concepts/实体关系抽取|实体关系抽取]] — LLM 抽取三元组→CSV→导入图库，图谱构建第一步（2026-08-01，来源 ×1）
-- [[01-Wiki/concepts/向量数据库|向量数据库]] — 高维向量存储检索、ANN 算法(HNSW/IVF/DiskANN)、与传统 DB 区别（2026-08-01，来源 ×1）
+- [[01-Wiki/concepts/向量数据库|向量数据库]] — 高维向量存储检索、ANN 算法(HNSW/IVF/DiskANN)、与传统 DB 区别（2026-09-11，来源 ×3）
 - [[01-Wiki/concepts/AI Agent|AI Agent]] — 感知→决策→行动→记忆闭环、6 大模块、3 大协议、工程视角最小定义与 7 模块/Workflow 边界/生产断层 + 进阶章节导航 06-17 + 经典理论视角（四元组/三轴分类）（2026-09-04，来源 ×9）
-- [[01-Wiki/concepts/Tool Calling|Tool Calling]] — Agent 与大模型 API 交互核心：无状态 API、消息角色、工具调用闭环≥2请求、call ID 因果、并行/流式 + 工具设计八原则与参数验证五闸门 + 失败反馈策略/工具选择打分/Function Calling vs Toolformer（2026-09-11，来源 ×3）
-- [[01-Wiki/concepts/Agent 评估|Agent 评估]] — 四维度(完成率/效率/安全/鲁棒)、四评测方法(测试集/LLM-as-Judge/A-B/Red Teaming)、持续监控 + 训练评测四层指标/防泄露 + 鲁棒性对抗测试清单与 fail-safe（2026-09-11，来源 ×3）
+- [[01-Wiki/concepts/Tool Calling|Tool Calling]] — Agent 与大模型 API 交互核心：无状态 API、消息角色、工具调用闭环≥2请求、call ID 因果、并行/流式 + 工具设计八原则与参数验证五闸门 + 失败反馈策略/工具选择打分/Function Calling vs Toolformer（2026-09-11，来源 ×4）
+- [[01-Wiki/concepts/Agent 评估|Agent 评估]] — 四维度(完成率/效率/安全/鲁棒)、四评测方法(测试集/LLM-as-Judge/A-B/Red Teaming)、持续监控 + 训练评测四层指标/防泄露 + 鲁棒性对抗测试清单与 fail-safe（2026-09-11，来源 ×5）
 - [[01-Wiki/concepts/Coding Agent|Coding Agent]] — 落地最成功 Agent 形态：外部验证器/代码即工具/结构化上下文/失败可控 + 三工程模式（2026-08-27，来源 ×1）
 - [[01-Wiki/concepts/Agent 自进化|Agent 自进化]] — 不改权重的运行时自改进：经验学习/工具创造/策略自优化 + 风险约束（2026-08-27，来源 ×1）
-- [[01-Wiki/concepts/异步 Agent 与事件驱动架构|异步 Agent 与事件驱动架构]] — 三异步模式、事件驱动、Safety Sidecar、工具三层隔离、Correlation ID（2026-08-27，来源 ×1）
+- [[01-Wiki/concepts/异步 Agent 与事件驱动架构|异步 Agent 与事件驱动架构]] — 三异步模式、事件驱动、Safety Sidecar、工具三层隔离、Correlation ID（2026-09-11，来源 ×2）
 - [[01-Wiki/concepts/多模态与实时交互 Agent|多模态与实时交互 Agent]] — Voice 三范式、GUI Agent、快慢解耦、延迟预算、Embodied 延伸（2026-08-27，来源 ×1）
 - [[01-Wiki/concepts/Agent SFT|Agent SFT]] — 用轨迹数据微调：Loss Mask 只对 tool_call/回复算 loss、含失败轨迹、SFT 后 RL（2026-08-27，来源 ×1）
 - [[01-Wiki/concepts/Agent 强化学习|Agent 强化学习]] — 任务级 Reward 超越 SFT 上限：Reward 设计、算法选型、Reward Hacking、RLVP/信用分配（2026-08-27，来源 ×2）
 - [[01-Wiki/concepts/PPO 与 GRPO|PPO 与 GRPO]] — 优势估计分歧(Critic vs 组内比较)、N=8 sweet spot、选型指南与混合方案（2026-08-27，来源 ×1）
 - [[01-Wiki/concepts/Agent 训练数据|Agent 训练数据]] — 六类数据配比、能力偏移、模型越小越保守、质量>数量、数据飞轮（2026-08-27，来源 ×1）
-- [[01-Wiki/concepts/Agent 模型部署|Agent 模型部署]] — checkpoint 选择/量化(INT8 默认)/KV Cache/Agent Runtime/循环硬限制/灰度监控（2026-08-27，来源 ×1）
+- [[01-Wiki/concepts/Agent 模型部署|Agent 模型部署]] — checkpoint 选择/量化(INT8 默认)/KV Cache/Agent Runtime/循环硬限制/灰度监控（2026-09-11，来源 ×2）
 - [[01-Wiki/concepts/Agent 训练环境|Agent 训练环境]] — 四平面闭环、环境契约、沙箱四硬规则、Verifier 隔离、数据回流保证据（2026-08-27，来源 ×1）
-- [[01-Wiki/concepts/单 Agent 与多 Agent|单 Agent 与多 Agent]] — 单 Agent 优先、三协作模式、上下文选择性共享、涌现行为 + 协作机制六形态与收敛容错机制（2026-09-11，来源 ×2）
+- [[01-Wiki/concepts/单 Agent 与多 Agent|单 Agent 与多 Agent]] — 单 Agent 优先、三协作模式、上下文选择性共享、涌现行为 + 协作机制六形态与收敛容错机制（2026-09-11，来源 ×3）
 - [[01-Wiki/concepts/时空可组合性|时空可组合性]] — 动态组合双维度：可逆效应(时间)+响应式余效应(空间)、组件演算（2026-08-15，来源 ×1）
 - [[01-Wiki/concepts/Query Engine|Query Engine]] — LlamaIndex 检索+合成指挥中心：Retriever+Synthsizer、4 合成模式、请求生命周期（2026-08-19，来源 ×1）
-- [[01-Wiki/concepts/混合检索|混合检索]] — 向量(dense)+BM25(sparse) 协同，RRF 融合、权重调优（2026-08-19，来源 ×1）
-- [[01-Wiki/concepts/BM25|BM25]] — 概率相关性打分，关键词检索核心，jieba 支持中文（2026-08-19，来源 ×1）
+- [[01-Wiki/concepts/混合检索|混合检索]] — 向量(dense)+BM25(sparse) 协同，RRF 融合、权重调优（2026-09-11，来源 ×3）
+- [[01-Wiki/concepts/BM25|BM25]] — 概率相关性打分，关键词检索核心，jieba 支持中文（2026-09-11，来源 ×2）
 - [[01-Wiki/concepts/多模态 RAG|多模态 RAG]] — 文本/图/表/图多模态检索生成，CLIP 跨模态对齐（2026-08-19，来源 ×1）
 - [[01-Wiki/concepts/文档解析|文档解析]] — 切分粒度矛盾、结构保留、格式难点，质量决定检索上限（2026-08-19，来源 ×1）
-- [[01-Wiki/concepts/嵌入模型|嵌入模型]] — 语义指纹，模型选型/误区/领域微调，决定检索天花板（2026-08-19，来源 ×1）
+- [[01-Wiki/concepts/嵌入模型|嵌入模型]] — 语义指纹，模型选型/误区/领域微调，决定检索天花板（2026-09-11，来源 ×2）
 - [[01-Wiki/concepts/MCP Server 开发|MCP Server 开发]] — 协议落地：Server 六组件、工具元数据与执行函数解耦、错误转返回值、鉴权三层粒度、路径白名单与注入防护（2026-09-04，来源 ×2）
-- [[01-Wiki/concepts/LangChain 组件与 Agent 模式|LangChain 组件与 Agent 模式]] — Chains 三形态、Memory 五策略、Callback 九钩子、四种 Agent 模式、性能四招 ⚠️ 旧版 API 与 eval 安全反例（2026-09-04，来源 ×2）
-- [[01-Wiki/concepts/Agent 记忆系统|Agent 记忆系统]] — 五层记忆划分、写入/读取双链路、**记忆衰减七机制**、海量历史查询三招(减数据/缩空间/快索引)（2026-09-11，来源 ×1）
-- [[01-Wiki/concepts/Agent 安全与对齐|Agent 安全与对齐]] — 纵深防御七层、三条底线(拦住/看见/撤销)、隐私与越权双解法、间接 Prompt 注入（2026-09-11，来源 ×1）
+- [[01-Wiki/concepts/LangChain 组件与 Agent 模式|LangChain 组件与 Agent 模式]] — Chains 三形态、Memory 五策略、Callback 九钩子、四种 Agent 模式、性能四招 ⚠️ 旧版 API 与 eval 安全反例（2026-09-11，来源 ×3）
+- [[01-Wiki/concepts/Agent 记忆系统|Agent 记忆系统]] — 五层记忆划分、写入/读取双链路、**记忆衰减七机制**、海量历史查询三招(减数据/缩空间/快索引)（2026-09-11，来源 ×2）
+- [[01-Wiki/concepts/Agent 安全与对齐|Agent 安全与对齐]] — 纵深防御七层、三条底线(拦住/看见/撤销)、隐私与越权双解法、间接 Prompt 注入（2026-09-11，来源 ×3）
 - [[01-Wiki/concepts/A2A 协议|A2A 协议]] — 跨厂商 Agent 互操作协议：Agent Card/Task/Artifact、与 MCP 的纵横分工（agent↔agent vs agent↔工具）（2026-09-11，来源 ×1）
+- [[01-Wiki/concepts/RAG 评估|RAG 评估]] — 检索层(Recall@k/NDCG)与生成层(忠实度/相关性)分阶段指标、四类评估方法、**分层定位瓶颈**与 CI 回归（2026-09-11，来源 ×1）
+- [[01-Wiki/concepts/高级 RAG 范式|高级 RAG 范式]] — 迭代检索/自适应检索(Self-RAG)/纠偏检索(CRAG)/子问题分解四条演进线 + **成本控制是真正的工程难点**（2026-09-11，来源 ×1）
+- [[01-Wiki/concepts/Agent 可观测性|Agent 可观测性]] — Trace/Metrics/Logs 三支柱、回放·Diff·失败归因三能力、告警设计与工具组合选型（2026-09-11，来源 ×1）
 
 ## 📋 待办与缺口 (Open Questions)
 
@@ -198,6 +203,10 @@ GROUP BY domain
 - **工具选择打分（tool router）** 的公开数据集与 baseline（2026-09-11）
 - **间接 Prompt 注入**（工具返回内容藏指令）的检测率/误杀率基准（2026-09-11）
 - **Agent 记忆衰减参数**的量化标定（时间衰减因子 / importance 阈值如何用评测集标定）（2026-09-11）
+- **Lost in the Middle 的缓解效果量化**：位置重排能带来多少 faithfulness 提升，有无公开实验（2026-09-11）
+- **增量更新一致性校验的阈值标定**：影子检索对比新老文档分布时，指标阈值怎么定（2026-09-11）
+- **多租户检索隔离的框架级强制**：如何在数据访问层强制注入 `tenant_id` 过滤，而非靠开发者自觉（2026-09-11）
+- **多语言 RAG 的分语言评估基线**：低资源语言的实际退化幅度（2026-09-11）
 
 ## 维护约定
 

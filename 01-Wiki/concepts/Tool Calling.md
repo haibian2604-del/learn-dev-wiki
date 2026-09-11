@@ -4,7 +4,7 @@ domain: tech
 tags: [agent, llm]
 created: 2026-08-26
 updated: 2026-09-11
-sources: ["[[01-Wiki/summaries/大模型 API 输入输出与 Tool Calling]]", "[[01-Wiki/summaries/架构师AI杜 Day21 MCP工具开发]]", "[[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]"]
+sources: ["[[01-Wiki/summaries/大模型 API 输入输出与 Tool Calling]]", "[[01-Wiki/summaries/架构师AI杜 Day21 MCP工具开发]]", "[[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]", "[[01-Wiki/summaries/AI Agent 面试题库 - RAG 系统篇]]"]
 status: mature
 ---
 
@@ -114,3 +114,4 @@ is_safe_path（白名单前缀）→ has_permission（权限位）→ is_too_lar
 - 实战来源：[[01-Wiki/summaries/大模型 API 输入输出与 Tool Calling]]、[[01-Wiki/summaries/架构师AI杜 Day21 MCP工具开发]]
 - 相关：[[01-Wiki/concepts/MCP]]（工具通信协议）、[[01-Wiki/concepts/MCP Server 开发]]（服务端落地）、[[01-Wiki/concepts/Agent Skills]]
 - 补充：[[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]（Q5/Q39/Q40/Q43/Q50/Q52 补**失败反馈策略**、**工具选择打分模块**、约束解码保 JSON、**Function Calling vs Toolformer 的本质区别**、调用错误的 SFT vs RL 路径选择）
+- 补充：[[01-Wiki/summaries/AI Agent 面试题库 - RAG 系统篇]]（Q20 Function Calling 与 MCP 的层次关系；开发岗一-Q8 的 FC 微调数据生成系统设计）

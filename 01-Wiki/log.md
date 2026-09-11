@@ -291,3 +291,31 @@
 1. **源文件命名与内容不符**：剪藏文件名与 frontmatter `title` 为 `02-rag-questions.md`，正文实为 **Agent 核心篇**，而 frontmatter `source` 又指向 `03-agent-questions.md`——剪藏器串号，已在摘要页标注
 2. **原文仅有题面、无任何答案**：52 题答案为本次补写，属**二次加工内容**而非原始资料；后续引用需区分「题目来自 AgentGuide，答案来自本 wiki」
 3. **题目无项目背景**：Q6/Q23/Q42 等"你有没有做过"类题目，标准答法与实际答法差异极大，摘要页已提示
+
+## [2026-09-11] ingest | AgentGuide 面试题库 2 篇（RAG 系统篇 22 题 + 开发岗专项 45 题）
+
+- 源文件（均自 `Clippings/` 归档并重命名）：
+  - `Clippings/AgentGuidedocs04-interviewREADME.md at main.md` → `00-Raw/agent-interview/AI Agent 面试题库 - RAG 系统篇.md`
+  - `Clippings/AgentGuidedocs04-interviewREADME.md at main 1.md` → `00-Raw/agent-interview/开发岗专项面试题库.md`
+  - 两篇**原名完全相同**（`README.md at main`），仅靠浏览器下载后缀 ` 1` 区分——剪藏器串号，归档时按正文标题重命名
+  - ⚠️ 归档前已逐题补写参考答案（22 + 45 = 67 题），源文件内容自此冻结
+- 来源：https://github.com/adongwanai/AgentGuide（docs/04-interview/）
+- **归档判断**：两篇均入 `00-Raw/agent-interview/`（该夹由 1 篇增至 3 篇）
+  - 理由：与「Agent 核心篇」同属 AgentGuide 04-interview 系列；两篇均横跨子域（RAG 系统篇跨检索/评估/工程，开发岗专项跨系统设计/工程/选型/业务），符合该夹「跨子域」定义
+  - ⚠️ **待复议**：RAG 系统篇主题上也可归入 `rag/`（§9.3 优先级 1「核心主题」倾向 rag）。本次按「同系列同处」原则归入 agent-interview，如需以主题优先请复议
+- 新增摘要页 ×2（domain=tech）：
+  - [[01-Wiki/summaries/AI Agent 面试题库 - RAG 系统篇]]（tags=rag/interview）
+  - [[01-Wiki/summaries/开发岗专项面试题库]]（tags=agent/interview）
+- 新增概念页 ×3（均为 wiki 空白领域）：
+  - [[01-Wiki/concepts/RAG 评估]]（检索层/生成层分阶段指标 + 四类评估方法 + 分层定位瓶颈）
+  - [[01-Wiki/concepts/高级 RAG 范式]]（迭代/自适应/纠偏检索 + 子问题分解 + **成本控制是真正的工程难点**）
+  - [[01-Wiki/concepts/Agent 可观测性]]（Trace/Metrics/Logs 三支柱 + 回放·Diff·归因三能力）
+- 更新已有概念页 ×18（追加 sources + 补回链 bullet + updated）：
+  RAG(×3→×5)、文本分块(×1→×2)、嵌入模型(×1→×2)、混合检索(×1→×3)、BM25(×1→×2)、查询路由(×1→×2)、向量数据库(×1→×3)、GraphRAG(×6→×7)、Agent 评估(×3→×5)、Agent 记忆系统(×1→×2)、Agent 模型部署(×1→×2)、LangChain 组件与 Agent 模式(×2→×3)、单 Agent 与多 Agent(×2→×3)、Agent 安全与对齐(×1→×3)、Tool Calling(×3→×4)、Kubernetes(×2→×3)、限流(×2→×3)、异步 Agent 与事件驱动架构(×1→×2)
+- 文档同步：[[01-Wiki/index.md]]（+2 摘要 / +3 概念 / 18 条目来源数重算 / 待办 +4）、[[02-Rules/分类体系]] §9.1（agent-interview 1→3 篇）、根 [[README.md]]（76 源 / 150 Wiki 页）
+
+### ⚠️ 本批记录的资料偏差
+
+1. **两篇原文件名完全相同**：均为 `AgentGuide/docs/04-interview/README.md at main`，仅靠下载后缀 ` 1` 区分；frontmatter `source` 分别指向 `02-rag-questions.md` 与 `06-development-specialized.md`——剪藏器串号，需靠正文标题辨识
+2. **原文只有题面与要点标题**：开发岗专项第四部分 Q5/Q6/Q7 原文的「设计要点/保护措施/实现方式」是**空标题**；67 题答案全部为本次补写，属**二次加工内容**而非原始资料
+3. **题目编号分部分重复**：开发岗专项四个部分各从 Q1 开始，引用必须带部分前缀（已统一标注为一-/二-/三-/四-）

@@ -3,8 +3,8 @@ type: concept
 domain: tech
 tags: [agent, llm]
 created: 2026-08-27
-updated: 2026-08-27
-sources: ["[[01-Wiki/summaries/从 SFT 到部署：Agent 模型上线全流程]]"]
+updated: 2026-09-11
+sources: ["[[01-Wiki/summaries/从 SFT 到部署：Agent 模型上线全流程]]", "[[01-Wiki/summaries/开发岗专项面试题库]]"]
 status: growing
 ---
 
@@ -33,3 +33,4 @@ status: growing
 - 上游：[[01-Wiki/concepts/Agent SFT]]、[[01-Wiki/concepts/Agent 强化学习]]、[[01-Wiki/concepts/Agent 评估]]
 - 生产底座：[[01-Wiki/concepts/Harness Engineering]]、[[01-Wiki/concepts/异步 Agent 与事件驱动架构]]
 - 实战来源：[[01-Wiki/summaries/从 SFT 到部署：Agent 模型上线全流程]]
+- 补充：[[01-Wiki/summaries/开发岗专项面试题库]]（二-Q5 推理吞吐优化：continuous batching / Paged Attention / 量化 / 并行策略 / prefill-decode 分离）

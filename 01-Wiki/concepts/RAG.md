@@ -3,8 +3,8 @@ type: concept
 domain: tech
 tags: [rag, llm, retrieval]
 created: 2026-07-31
-updated: 2026-08-01
-sources: ["[[01-Wiki/summaries/第 19 章 RAG 检索增强生成]]", "[[01-Wiki/summaries/VectorStoreIndex 深入：向量索引的内部机制与优化]]", "[[01-Wiki/summaries/混合检索：向量搜索 + 关键词搜索的协同]]"]
+updated: 2026-09-11
+sources: ["[[01-Wiki/summaries/第 19 章 RAG 检索增强生成]]", "[[01-Wiki/summaries/VectorStoreIndex 深入：向量索引的内部机制与优化]]", "[[01-Wiki/summaries/混合检索：向量搜索 + 关键词搜索的协同]]", "[[01-Wiki/summaries/AI Agent 面试题库 - RAG 系统篇]]", "[[01-Wiki/summaries/开发岗专项面试题库]]"]
 status: growing
 ---
 
@@ -64,3 +64,4 @@ status: growing
 - [[01-Wiki/concepts/GraphRAG]]（知识图谱增强范式，详见图 RAG 系列摘要）
 - 进阶：混合检索（BM25+向量，见 [[01-Wiki/concepts/混合检索]] / [[01-Wiki/concepts/BM25]]）、Rerank、查询改写（HyDE）
 - 框架实现：[[01-Wiki/entities/LangChain]]、[[01-Wiki/entities/LlamaIndex]]（含 Query Engine / VectorStoreIndex 内部机制）
+- 补充：[[01-Wiki/summaries/AI Agent 面试题库 - RAG 系统篇]]（Q1 原理与 vs 微调边界、Q2 离线/在线双链路流水线、Q10 部署挑战、Q12 开源框架选型）、[[01-Wiki/summaries/开发岗专项面试题库]]（一-Q1 日均百万级 RAG 系统设计与容量推算、二-Q7 增量索引）

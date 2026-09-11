@@ -3,8 +3,8 @@ type: concept
 domain: tech
 tags: [agent]
 created: 2026-08-27
-updated: 2026-08-27
-sources: ["[[01-Wiki/summaries/异步 Agent 与事件驱动架构]]"]
+updated: 2026-09-11
+sources: ["[[01-Wiki/summaries/异步 Agent 与事件驱动架构]]", "[[01-Wiki/summaries/开发岗专项面试题库]]"]
 status: growing
 ---
 
@@ -55,3 +55,4 @@ status: growing
 - 上游：[[01-Wiki/concepts/AI Agent]]、[[01-Wiki/concepts/Harness Engineering]]、[[01-Wiki/concepts/Tool Calling]]
 - 实战来源：[[01-Wiki/summaries/异步 Agent 与事件驱动架构]]
 - 相关：[[01-Wiki/concepts/Loop Engineering]]、[[01-Wiki/concepts/Workflow Graph]]
+- 补充：[[01-Wiki/summaries/开发岗专项面试题库]]（一-Q3 流式 RAG 系统、二-Q9 流式处理 SSE vs WebSocket 与背压）

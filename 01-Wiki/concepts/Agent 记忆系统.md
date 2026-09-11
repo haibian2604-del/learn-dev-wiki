@@ -4,7 +4,7 @@ domain: tech
 tags: [agent, memory, rag]
 created: 2026-09-11
 updated: 2026-09-11
-sources: ["[[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]"]
+sources: ["[[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]", "[[01-Wiki/summaries/开发岗专项面试题库]]"]
 status: growing
 ---
 
@@ -77,3 +77,4 @@ status: growing
 - [[01-Wiki/concepts/上下文工程]]、[[01-Wiki/concepts/向量数据库]]、[[01-Wiki/concepts/混合检索]]、[[01-Wiki/concepts/嵌入模型]]
 - [[01-Wiki/concepts/知识图谱]]（结构化记忆）、[[01-Wiki/concepts/RAG]]、[[01-Wiki/concepts/Query Engine]]
 - [[01-Wiki/summaries/Context、State 与 Memory]]、[[01-Wiki/summaries/高级 RAG 与记忆架构]]、[[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]
+- 补充：[[01-Wiki/summaries/开发岗专项面试题库]]（一-Q7 Memory 系统设计题四层架构、三-Q3 Mem0 vs Zep vs LangChain 选型、二-Q4 长对话超过 10 轮的处理）
