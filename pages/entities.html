@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>实体页 · my-knowledge</title>
+<meta name="description" content="知识库中的实体页：人物、组织、产品、项目的定义与关键事实。">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body data-page="list" data-kind="entity">
+
+<script>window.SITE_ROOT = "../";</script>
+<header id="site-nav"></header>
+<script src="../assets/nav.js"></script>
+
+<main class="wrap" id="main">
+
+  <div class="page-head">
+    <div>
+      <h1>实体页</h1>
+      <p>记录具体对象 —— 人物、组织、产品、项目、作品：定义、关键事实、时间线与相关页面。</p>
+    </div>
+    <span class="page-head__meta" id="generated-at"></span>
+  </div>
+
+  <div class="filters">
+    <div class="field">
+      <span class="field__label">领域</span>
+      <select id="filter-domain"></select>
+    </div>
+    <div class="field">
+      <span class="field__label">状态</span>
+      <select id="filter-status"></select>
+    </div>
+    <div class="field">
+      <span class="field__label">标签</span>
+      <select id="filter-tag"></select>
+    </div>
+    <div class="field">
+      <span class="field__label">搜索</span>
+      <input id="filter-search" type="search" placeholder="标题 / 简介 / 来源…" autocomplete="off">
+    </div>
+    <button class="btn" id="filter-reset" type="button">重置</button>
+    <span class="filters__spacer"></span>
+    <span class="filters__count" id="filter-count"></span>
+  </div>
+
+  <div class="card-grid" id="card-grid">
+    <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+  </div>
+
+</main>
+
+<footer id="site-footer"></footer>
+<script src="../data/wiki-data.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

@@ -182,6 +182,7 @@ status: seedling
 6. **记日志**：向 `log.md` 追加一条，格式见下
 7. **归档**：判定源文件的**知识点**，将其从 `inbox/` 移入 `00-Raw/<知识点文件夹>/`；若无匹配文件夹 → **新建一个**（英文小写连字符命名，见 [[02-Rules/分类体系]] §9）并登记到分类体系与 `log.md`
    - 移动文件后，**必须同步更新** `sources:` 等所有指向该源的 `[[00-Raw/...]]` 链接，避免死链
+8. **刷新看板**：`python3 scripts/build.py`，让根目录的网页看板与内容同步（见 §7）
 
 批量摄入（用户一次性放多篇）时流程相同，但第 2 步可以跳过，逐篇处理并保持索引一致。
 
@@ -236,3 +237,70 @@ SORT updated DESC
 
 - **Marp**：从 wiki 内容一键生成幻灯片
 - **Obsidian Web Clipper**：浏览器插件，把网页一键转 markdown 投入 `00-Raw/inbox/`
+
+## 7. 看板维护（根目录 `index.html`）
+
+> 看板是知识库的**只读展示层**：把 `01-Wiki/` 的内容以网页形式呈现，供用户快速浏览与纵览规模。
+> 它**不产生新知识、不参与分类**——改看板 ≠ 改知识。
+
+### 7.1 硬约束（不得违反）
+
+| 约束 | 说明 |
+|------|------|
+| **双击即用** | 直接双击 `index.html` 用浏览器打开（`file://`）即可浏览，**不需要起服务、不需要联网、不需要装依赖** |
+| **数据与视图分离** | 数据由 `scripts/build.py` 生成到 `data/wiki-data.js`，页面只负责渲染；**禁止手工编辑生成产物** |
+| **配色不另起一套** | 全部色值取自 [[02-Rules/分类体系]] §8，与 Obsidian 的 `wiki-colors.css` / `graph.json` 保持一致 |
+| **只读** | 看板不得修改 `00-Raw/` 与 `01-Wiki/` 的任何内容 |
+
+### 7.2 文件结构
+
+```
+index.html                 # 概览看板：规模 / 构成分布 / 主题分布 / 增长 / 最近活动
+pages/summaries.html       # 摘要列表
+pages/entities.html        # 实体列表
+pages/concepts.html        # 概念列表
+assets/style.css           # 共用样式（分类体系配色 token 落在这里）
+assets/nav.js              # 顶部导航 + 页脚；NAV 数组是导航的唯一数据源
+assets/app.js              # 渲染与交互逻辑（零依赖、零网络请求）
+assets/vendor/             # 第三方库本地副本（当前：Chart.js 4.4.1 UMD）
+data/wiki-data.js          # ← 生成产物，必须提交 git
+scripts/build.py           # 生成器（Python 纯标准库，无第三方依赖）
+```
+
+### 7.3 生成与查看
+
+```bash
+python3 scripts/build.py            # 刷新 data/wiki-data.js
+python3 scripts/build.py --serve    # 可选：另起本地服务（非必需）
+```
+
+- 产物形如 `window.KB_DATA = {...}`，用 `<script src>` 引入。**不要改回 `.json` + `fetch()`**——`file://` 协议下 fetch 会被 CORS 拦截，双击打开会白屏。
+- 第三方库一律放 `assets/vendor/` 本地副本，**禁止改用 CDN**，否则断网或被墙时图表全白。
+- `data/wiki-data.js` **必须提交进 git**：clone 下来无需装环境、无需跑脚本即可直接浏览。
+
+### 7.4 数据来源与提取规则
+
+| 看板字段 | 提取来源 |
+|----------|----------|
+| 页面元数据 | 各页 frontmatter 的 `type / domain / tags / status / created / updated / sources` |
+| 一句话简介 | 摘要页取 H1 后的首个 `>` 引用块；实体 / 概念页取首个正文章节的首句话 |
+| 规模统计 | `01-Wiki/` 页数、`00-Raw/` 文件数、`[[...]]` 双链总数、标签数 |
+| 知识点分布 | `00-Raw/` 各知识点夹的文件数，中文名读自 [[02-Rules/分类体系]] §9.1 |
+| 增长曲线 | 累计页面取 frontmatter 的 `created`；摄入量取 `log.md` 的 `ingest` 记录 |
+| 最近活动 | `log.md` 最后 12 条 |
+
+> ⚠️ 由上看板的数据质量**直接受写页习惯影响**：frontmatter 字段缺失、摘要页删掉一句话引用块、`log.md` 不按 §4 格式追加，都会让看板缺数据。**写页时必须守住这三条**。
+
+### 7.5 何时更新
+
+- **每次 ingest / lint / update 之后**：作为工作流最后一步跑一次 `build.py`（见 §3.1 第 8 步）
+- 只改看板代码 / 样式时：**无需**重新生成数据，浏览器刷新即可
+- 看板右上角显示「数据生成于 …」时间戳，可据此判断是否需要刷新
+
+### 7.6 扩展规则
+
+- **新增知识点**：`00-Raw/` 建新夹 → 在 [[02-Rules/分类体系]] §9.1 登记 → 重新生成数据，看板的「按知识点分布」自动出现新条目
+- **新增 domain / 常用 tag**：在 §8 登记颜色 → 同步 `assets/style.css` 的 CSS 变量与 `scripts/build.py` 的 `DOMAIN_META`，与 `wiki-colors.css` / `graph.json` 共四处一致
+- **新增页面类型**：① `01-Wiki/` 建目录 → ② `pages/<类型>.html` 新建列表页 → ③ `assets/nav.js` 的 `NAV` 加一项 → ④ `scripts/build.py` 的 `TYPE_META` 与 `KIND_DIR` 登记
+- **拆包阈值**：单个列表页超过约 **120 条**时拆成 `pages/<类型>-<子分组>.html`（按 domain 或首字母分组），并在 `NAV` 挂为二级入口；`index.html` **始终只放概览，不放长列表**
+- **前端不硬编码色值**：分类色统一从 `data/wiki-data.js` 的 `typeMeta / domainMeta / statusMeta / palette` 读取

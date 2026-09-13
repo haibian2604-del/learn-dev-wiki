@@ -103,3 +103,8 @@
 .tag[href="#ai-coding"] { background-color: #d0ebff; color: #1a1a1a; }
 .tag[href="#vibe-coding"] { background-color: #ffb3d9; color: #1a1a1a; }
 .tag[href="#graphrag"] { background-color: #c2255c; color: #fff; }
+/* Agentic AI 课程批次新增（2026-09-13），色值见 [[02-Rules/分类体系]] §8.4 */
+.tag[href="#evals"] { background-color: #c2255c; color: #fff; }
+.tag[href="#reflection"] { background-color: #ffd43b; color: #1a1a1a; }
+.tag[href="#tool-use"] { background-color: #4dabf7; color: #1a1a1a; }
+.tag[href="#planning"] { background-color: #69db7c; color: #1a1a1a; }

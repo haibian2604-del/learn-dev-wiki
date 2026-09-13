@@ -36,6 +36,13 @@
       }
     },
     {
+      "query": "#llamaindex",
+      "color": {
+        "a": 1,
+        "rgb": 6767065
+      }
+    },
+    {
       "query": "#skills",
       "color": {
         "a": 1,
@@ -71,6 +78,13 @@
       }
     },
     {
+      "query": "#reflection",
+      "color": {
+        "a": 1,
+        "rgb": 9754669
+      }
+    },
+    {
       "query": "#workflow",
       "color": {
         "a": 1,
@@ -82,6 +96,27 @@
       "color": {
         "a": 1,
         "rgb": 16429061
+      }
+    },
+    {
+      "query": "#planning",
+      "color": {
+        "a": 1,
+        "rgb": 6937468
+      }
+    },
+    {
+      "query": "#evals",
+      "color": {
+        "a": 1,
+        "rgb": 10886733
+      }
+    },
+    {
+      "query": "#tool-use",
+      "color": {
+        "a": 1,
+        "rgb": 5090295
       }
     },
     {
@@ -242,6 +277,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.8458638824835507,
+  "scale": 0.5416074556291745,
   "close": true
 }

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>概览看板 · my-knowledge</title>
+<meta name="description" content="my-knowledge LLM Wiki 知识库数据看板：页面规模、构成分布、主题分布与增长曲线。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="dashboard">
+
+<script>window.SITE_ROOT = "";</script>
+<header id="site-nav"></header>
+<script src="assets/nav.js"></script>
+
+<main class="wrap" id="main">
+
+  <div class="page-head">
+    <div>
+      <h1>知识库概览</h1>
+      <p>三层架构 <code>00-Raw</code>（只读源）→ <code>01-Wiki</code>（LLM 维护）→ <code>02-Rules</code>（schema）。全部数字由 <code>scripts/build.py</code> 扫描仓库实时生成。</p>
+    </div>
+    <span class="page-head__meta" id="generated-at"></span>
+  </div>
+
+  <section class="section">
+    <h2 class="section__title">规模</h2>
+    <div class="stat-grid" id="stats">
+      <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+      <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section__title">构成</h2>
+    <div class="chart-grid chart-grid--3">
+
+      <div class="panel">
+        <div class="panel__head">
+          <span class="panel__title">页面类型</span>
+          <span class="panel__note">type</span>
+        </div>
+        <div class="panel__canvas"><canvas id="chart-type"></canvas></div>
+        <div class="legend" id="legend-type"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel__head">
+          <span class="panel__title">成熟度</span>
+          <span class="panel__note">status</span>
+        </div>
+        <div class="panel__canvas"><canvas id="chart-status"></canvas></div>
+        <div class="legend" id="legend-status"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel__head">
+          <span class="panel__title">主题领域</span>
+          <span class="panel__note">domain</span>
+        </div>
+        <div class="panel__canvas"><canvas id="chart-domain"></canvas></div>
+        <div class="legend" id="legend-domain"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section__title">主题分布</h2>
+    <div class="chart-grid chart-grid--2">
+
+      <div class="panel">
+        <div class="panel__head">
+          <span class="panel__title">按知识点分布的源文件</span>
+          <span class="panel__note">00-Raw / 分类体系 §9</span>
+        </div>
+        <div class="panel__canvas panel__canvas--tall"><canvas id="chart-kp"></canvas></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel__head">
+          <span class="panel__title">高频主题标签</span>
+          <span class="panel__note">top 20 tags</span>
+        </div>
+        <div class="bars" id="top-tags"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section__title">增长</h2>
+    <div class="panel">
+      <div class="panel__head">
+        <span class="panel__title">页面累积与源文件摄入</span>
+        <span class="panel__note">按月 · 页面取 frontmatter.created，摄入取 log.md</span>
+      </div>
+      <div class="panel__canvas panel__canvas--wide"><canvas id="chart-growth"></canvas></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section__title">最近活动</h2>
+    <div class="panel">
+      <div class="panel__head">
+        <span class="panel__title">log.md 最近 12 条</span>
+        <span class="panel__note">01-Wiki/log.md</span>
+      </div>
+      <div class="timeline" id="activity"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="site-footer"></footer>
+
+<!-- 依赖顺序：图表库 → 数据 → 逻辑。全部为普通脚本，双击本文件即可打开 -->
+<script src="assets/vendor/chart.umd.min.js"></script>
+<script src="data/wiki-data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
