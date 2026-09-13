@@ -3,8 +3,8 @@ type: concept
 domain: tech
 tags: [mcp, agent, protocol]
 created: 2026-07-31
-updated: 2026-09-04
-sources: ["[[01-Wiki/summaries/第 20 章 MCP 模型上下文协议]]", "[[01-Wiki/summaries/架构师AI杜 Day19 MCP协议深度解析]]"]
+updated: 2026-09-13
+sources: ["[[01-Wiki/summaries/第 20 章 MCP 模型上下文协议]]", "[[01-Wiki/summaries/架构师AI杜 Day19 MCP协议深度解析]]", "[[01-Wiki/summaries/Agentic AI 课程 3.7 MCP]]"]
 status: mature
 ---
 
@@ -136,3 +136,15 @@ MCP 普及使第三方工具集成成本降低约 80%。
 | 无握手 | `initialize` 握手 + capabilities 能力协商 |
 
 > 判断依据：以官方规范与 SDK（[[01-Wiki/entities/FastMCP]]）为准；详见 [[01-Wiki/concepts/MCP Server 开发]]。
+
+## 补充视角：m × n → m + n 的价值论证（Agentic AI 课程 3.7）
+
+> 来自 [[01-Wiki/summaries/Agentic AI 课程 3.7 MCP]]：解释 MCP 必要性最直观的一个论证。
+
+- **传统模式的复杂度**：开发者 A 的 App 1 需要 Slack + Google Drive + GitHub + PostgreSQL，开发者 B 的 App 2 同样需要——每个应用都要独立编写封装代码。若有 `m` 个应用、`n` 个工具，社区总工作量是 **m × n**
+- **MCP 的解法**：只需开发 `n` 个 MCP 服务器（每个工具一个），让 `m` 个应用连接它们即可，总工作量降为 **m + n**
+- **客户端示例**：Cursor、Claude Desktop、Windsurf；**服务器示例**：Slack、Google Drive、GitHub、PostgreSQL（部分是服务商官方开发，也有大量第三方贡献）
+- **能力演进**：初始设计侧重"为 LLM 提供上下文"，工具主要用于 fetch data；现已扩展为可调用更通用功能与执行操作（MCP 文档统称"资源 resources"）
+- **演示链路**：Claude Desktop 作为 Client → 向 GitHub MCP Server 请求（参数含 `README.md`、仓库 `aisuite`、所有者 `andrewng`）→ Server 下载内容返回 → LLM 生成摘要；二次查询可列出 Pull Request 并整理成清单
+
+> ⚠️ **资料偏差**：该讲把 MCP 的提出者写成 "Entropy"，**实为 Anthropic**——本页定义与 [[01-Wiki/summaries/第 20 章 MCP 模型上下文协议]] 为准，引用时勿沿用错误归属。

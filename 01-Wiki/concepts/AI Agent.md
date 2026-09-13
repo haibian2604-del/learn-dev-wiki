@@ -3,7 +3,7 @@ type: concept
 domain: tech
 tags: [agent, llm]
 created: 2026-08-01
-updated: 2026-09-04
+updated: 2026-09-13
 sources: ["[[01-Wiki/summaries/2026 年 AI Agent 技术全景]]", "[[01-Wiki/summaries/什么是 Agent]]", "[[01-Wiki/summaries/Workflow 和 Agent 的区别]]", "[[01-Wiki/summaries/一个 Agent 系统的核心组成]]", "[[01-Wiki/summaries/为什么很多 Agent Demo 一落地就不稳定]]", "[[01-Wiki/summaries/大模型 API 输入输出与 Tool Calling]]", "[[01-Wiki/summaries/单 Agent 和多 Agent 的边界]]", "[[01-Wiki/summaries/多模态与实时交互 Agent]]", "[[01-Wiki/summaries/架构师AI杜 Day35 Agent基础概念]]"]
 status: mature
 ---
@@ -140,5 +140,6 @@ Demo 关注“能不能动”，生产关注“会不会坏”。断层：目标
 
 ## 相关概念
 
+- [[01-Wiki/concepts/Agentic AI 工作流]]（本页的"工作流形态 + 自主性光谱"切法，2026-09-13 新增）
 - [[01-Wiki/concepts/ReAct]]、[[01-Wiki/concepts/Harness Engineering]]、[[01-Wiki/concepts/Workflow Graph]]、[[01-Wiki/concepts/MCP]]、[[01-Wiki/concepts/Agent Skills]]、[[01-Wiki/concepts/上下文工程]]、[[01-Wiki/concepts/Loop Engineering]]
 - 相关实体：[[01-Wiki/entities/LangChain]]、[[01-Wiki/entities/AutoGen]]、[[01-Wiki/entities/AutoGPT]]、[[01-Wiki/entities/LangGraph]]、[[01-Wiki/entities/LlamaIndex]]、[[01-Wiki/entities/CrewAI]]、[[01-Wiki/entities/hello-agents]]

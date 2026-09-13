@@ -3,8 +3,8 @@ type: concept
 domain: tech
 tags: [agent]
 created: 2026-08-27
-updated: 2026-09-11
-sources: ["[[01-Wiki/summaries/单 Agent 和多 Agent 的边界]]", "[[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]", "[[01-Wiki/summaries/开发岗专项面试题库]]"]
+updated: 2026-09-13
+sources: ["[[01-Wiki/summaries/单 Agent 和多 Agent 的边界]]", "[[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]", "[[01-Wiki/summaries/开发岗专项面试题库]]", "[[01-Wiki/summaries/Agentic AI 课程 5.5 多智能体工作流]]", "[[01-Wiki/summaries/Agentic AI 课程 5.7 多智能体通信模式]]", "[[01-Wiki/summaries/Agentic AI 课程 1.8 Agentic 设计模式]]"]
 status: growing
 ---
 
@@ -53,6 +53,31 @@ status: growing
 
 单 Agent 做扎实 → 找真正瓶颈 → 只在必要处拆子 Agent → 让多 Agent 服务问题而非演示效果。
 
+## 补充视角：四种通信拓扑（Agentic AI 课程 5.7）
+
+> 来自 [[01-Wiki/summaries/Agentic AI 课程 5.7 多智能体通信模式]]：把"怎么连"讲成四种可选拓扑 + 适用场景。
+
+| 模式 | 结构特征 | 优点 | 缺点 | 适用场景 |
+|------|----------|------|------|----------|
+| 线性 Linear | 顺序执行，单向通信 | 简单 | 不灵活 | 固定流程任务 |
+| 双层 Hierarchical | 中心协调（Manager） | 易控制 | Manager 成瓶颈 | 多任务协调 |
+| 多层 Deep Hierarchy | 子 Agent 分层 | 模块化 | 复杂 | 大型系统 |
+| 去中心 All-to-all | 自由对话 | 创造性强 | 不可预测 | 探索/生成型任务 |
+
+- **第五种 · 对话模式**：去中心的降级版——每次只有两个 Agent 对话，一方执行、一方审查，直到双方满意（本质是 [[01-Wiki/concepts/反思模式]] 的双 Agent 形态）
+- **实务判断**：**生产中以线性与双层更常用**——对当前 LLM 能力而言，信息在层级间传递会丢失部分信息，**层级越多，信息越匮乏/失真**
+- **框架结构偏好**：[[01-Wiki/entities/LangChain]] 是忠实的线性结构；[[01-Wiki/entities/smolagents]] 更青睐双层/多层；metagpt、camelai 致力于去中心。多数框架都能实现多种结构，只是代码风格不同
+
+## 补充视角：拆分的四条收益（Agentic AI 课程 5.5）
+
+> 来自 [[01-Wiki/summaries/Agentic AI 课程 5.5 多智能体工作流]]：官方三条 + 笔记作者补充两条。
+
+1. **任务分解**：像人类团队一样，自然分解为有不同角色与技能的子任务
+2. **专注性**：一次只专注构建一个角色；**单个 Agent 的任务越简单，完成效果通常越好**
+3. **模块化与复用**：可创建复用于其他应用的通用智能体（如"平面设计师智能体"）
+4. **突破上下文限制**：让每个 Agent 只返回自己的调研结果，由**总结 Agent** 汇总——总结 Agent 不必存储其他 Agent 的调研过程，**只看结果就够**
+5. **节约成本**：每个 Agent 上下文短 → 省 Token 费用、延迟更低，且可并行处理
+
 ## 关联
 
 - 上游：[[01-Wiki/concepts/AI Agent]]、[[01-Wiki/concepts/Workflow Graph]]
@@ -61,3 +86,5 @@ status: growing
 - 补充：[[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]（Q9/Q18/Q32/Q34/Q36 补**协作机制六形态**——Supervisor/流水线/辩论投票/黑板/群聊/招标，以及误差级联、收敛机制、异步一致性的工程解法）
 - 另见：[[01-Wiki/concepts/A2A 协议]]（跨组织协作的协议层）、[[01-Wiki/concepts/Agent 记忆系统]]（多 Agent 的上下文解耦动机）
 - 补充：[[01-Wiki/summaries/开发岗专项面试题库]]（一-Q2 Multi-Agent 客服系统设计：职责边界互不重叠/会话串行化/Saga 补偿、一-Q5 分布式调度、二-Q8 并发控制）
+- 补充：[[01-Wiki/summaries/Agentic AI 课程 5.7 多智能体通信模式]]（四种通信拓扑 + "层级越多信息越失真" + 对话模式）、[[01-Wiki/summaries/Agentic AI 课程 5.5 多智能体工作流]]（总结 Agent 只看结果以规避上下文限制）
+- 相关：[[01-Wiki/concepts/规划模式]]（单 Agent 的高自主形态）、[[01-Wiki/concepts/延迟与成本优化]]（多 Agent 的成本杠杆）

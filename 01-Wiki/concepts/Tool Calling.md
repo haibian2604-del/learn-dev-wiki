@@ -3,8 +3,8 @@ type: concept
 domain: tech
 tags: [agent, llm]
 created: 2026-08-26
-updated: 2026-09-11
-sources: ["[[01-Wiki/summaries/大模型 API 输入输出与 Tool Calling]]", "[[01-Wiki/summaries/架构师AI杜 Day21 MCP工具开发]]", "[[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]", "[[01-Wiki/summaries/AI Agent 面试题库 - RAG 系统篇]]"]
+updated: 2026-09-13
+sources: ["[[01-Wiki/summaries/大模型 API 输入输出与 Tool Calling]]", "[[01-Wiki/summaries/架构师AI杜 Day21 MCP工具开发]]", "[[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]", "[[01-Wiki/summaries/AI Agent 面试题库 - RAG 系统篇]]", "[[01-Wiki/summaries/Agentic AI 课程 3.1 什么是工具]]", "[[01-Wiki/summaries/Agentic AI 课程 3.2 创建一个工具]]", "[[01-Wiki/summaries/Agentic AI 课程 3.3 工具调用语法]]"]
 status: mature
 ---
 
@@ -101,6 +101,17 @@ is_safe_path（白名单前缀）→ has_permission（权限位）→ is_too_lar
 
 ⚠️ 白名单前缀匹配的经典绕过：`"/tmp_evil/x".startswith("/tmp") == True`，应改用 `os.path.commonpath()`。
 
+## 补充视角：教学路径——"请求-解析-执行-回填"四步（Agentic AI 课程 3.1-3.3）
+
+> 来自 [[01-Wiki/summaries/Agentic AI 课程 3.2 创建一个工具]]：技术上 **LLM 不直接调用工具，它只是"请求"调用**；说"LLM 调用了工具"是社区简化说法。开发者扮演"翻译官 + 执行者"。
+
+- **四步循环**：① 提供工具（写好函数）→ ② 告知模型（系统提示词说明有哪些工具、如何"请求"）→ ③ 解析并执行（监听输出、识别请求、实际调用）→ ④ 反馈结果（执行结果作为新上下文回填，模型继续推理）
+- **两代实现**：早期靠手动提示工程约定文本格式（`FUNCTION: get_current_time("Pacific/Auckland")`）并写解析器；现代 LLM 原生训练过工具使用，只需提供工具描述与可用性
+- **条件性调用（重要判据）**：模型应能区分**静态知识（可内化，如"绿茶含多少咖啡因"直接答）**与**动态信息（需外求，如"现在几点"调工具）**——这是"该不该调工具"的设计原则
+- **工具描述自动化**：[[01-Wiki/entities/aisuite]] 可从函数签名 + **docstring** 自动生成 JSON Schema；`parameters` 类型与说明全部来自 docstring → **docstring 质量直接决定模型能否正确调用**
+- **`max_turns` 防死循环**：课程建议常设 5，除非任务异常复杂——与本页"没有调用预算 → 成本失控"的坑对应
+- **多工具串联示例**：日历助理 `check_calendar()` → 选 3pm → `make_appointment(time="3pm", with="Alice")` → 回填并回复用户
+
 ## 常见坑
 
 - 模型假装调用过工具（编结果而非发真实请求）→ 按响应类型显式区分文本/工具请求/程序执行结果。
@@ -115,3 +126,5 @@ is_safe_path（白名单前缀）→ has_permission（权限位）→ is_too_lar
 - 相关：[[01-Wiki/concepts/MCP]]（工具通信协议）、[[01-Wiki/concepts/MCP Server 开发]]（服务端落地）、[[01-Wiki/concepts/Agent Skills]]
 - 补充：[[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇]]（Q5/Q39/Q40/Q43/Q50/Q52 补**失败反馈策略**、**工具选择打分模块**、约束解码保 JSON、**Function Calling vs Toolformer 的本质区别**、调用错误的 SFT vs RL 路径选择）
 - 补充：[[01-Wiki/summaries/AI Agent 面试题库 - RAG 系统篇]]（Q20 Function Calling 与 MCP 的层次关系；开发岗一-Q8 的 FC 微调数据生成系统设计）
+- 补充：[[01-Wiki/summaries/Agentic AI 课程 3.1 什么是工具]]、[[01-Wiki/summaries/Agentic AI 课程 3.2 创建一个工具]]、[[01-Wiki/summaries/Agentic AI 课程 3.3 工具调用语法]]（四步循环 / 条件性调用 / aisuite 自动 schema）
+- 相关：[[01-Wiki/concepts/代码执行]]（"行动"的另一种形式：不造工具，让模型写代码）、[[01-Wiki/concepts/Agentic AI 工作流]]

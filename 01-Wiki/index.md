@@ -106,6 +106,38 @@ GROUP BY domain
 - [[01-Wiki/summaries/AI Agent 面试题库 - Agent 核心篇|AI Agent 面试题库 - Agent 核心篇]] — 52 道 Agent 岗面试题（标注字节/阿里/腾讯高频与真题）：七大部分结构、八大模块的标准答法要点、工程题"分层+量化"套路（2026-09-11，来源 ×1）
 - [[01-Wiki/summaries/AI Agent 面试题库 - RAG 系统篇|AI Agent 面试题库 - RAG 系统篇]] — 22 道 RAG 岗面试题（含字节/美团真题）：核心原理/检索优化/评估/工程实践/进阶范式五部分，八大高频考点的标准答法（2026-09-11，来源 ×1）
 - [[01-Wiki/summaries/开发岗专项面试题库|开发岗专项面试题库]] — 45 道开发岗面试题（系统设计 15/工程实践 12/框架选型 10/业务落地 8）：按真实 JD 三层考察点组织，含带 SLA 数字的容量规划与 ROI 归因（2026-09-11，来源 ×1）
+- **《Agentic AI》课程（吴恩达）31 篇** — 术语由吴恩达创造；主线是"有纪律的评估与错误分析"
+- [[01-Wiki/summaries/Agentic AI 课程 1.1 欢迎与课程目标|1.1 欢迎与课程目标]] — 术语由来与被营销滥用、四类应用实例、评估纪律是分水岭（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 1.2 什么是 Agentic AI|1.2 什么是 Agentic AI]] — 零样本 vs 多步迭代；写文章 7 步工作流（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 1.3 自主性等级|1.3 自主性等级]] — 用形容词替代定义之争：硬编码流程 ↔ 自选步骤/工具/新建工具（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 1.4 Agentic AI 的益处|1.4 益处]] — HumanEval 48%/67% → Agentic GPT-3.5 追平 GPT-4；并行加速与模块化（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 1.5 Agentic AI 应用场景|1.5 应用场景]] — 四案例由易到难 + 任务难度光谱（纯文本易、步骤未知/多模态难）（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 1.6 任务分解|1.6 任务分解]] — 四步方法、写文章 1/3/5 步对照、模型+工具两大构件（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 1.7 评估概览|1.7 评估概览]] — 先构建再观察后评估；客观指标 vs LLM 裁判；端到端 vs 组件级（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 1.8 Agentic 设计模式|1.8 Agentic 设计模式]] — 全课总纲：反思/工具使用/规划/多智能体 + 多智能体 vs 单智能体三组数据（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 2.1 反思提升任务输出|2.1 反思提升任务输出]] — 硬编码"生成→反思"两阶段；写邮件/写代码三层次；外部反馈是终极形态（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 2.2 为何不只用直接生成|2.2 为何不只用直接生成]] — Self-Refine 论文：7 任务 × 4 模型全部提升；反思提示两条黄金法则（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 2.3 图表生成工作流|2.3 图表生成工作流]] — 多模态反思：让模型"看图"给改进建议；生成模型与思考模型分工（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 2.5 评估反思的影响|2.5 评估反思的影响]] — SQL 任务反思 +8%；位置偏见；主观评估用 Rubric 而非直接比较（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 2.6 使用外部反馈|2.6 使用外部反馈]] — 三层性能平台（调提示词/反思/外部反馈）；模式匹配/搜索/字数三类反馈源（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 3.1 什么是工具|3.1 什么是工具]] — 工具即函数、模型自主决策；条件性调用（静态知识 vs 动态信息）；日历多工具串联（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 3.2 创建一个工具|3.2 创建一个工具]] — "模型请求 / 开发者执行"四步循环；FUNCTION 文本协议与解析器（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 3.3 工具调用语法|3.3 工具调用语法]] — aisuite 自动从 docstring 生成 JSON Schema；`tools=[函数]` + `max_turns`（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 3.6 代码执行|3.6 代码执行]] — 让模型写代码替代造工具；⚠️ `rm *.py` 事故与 Docker/E2B 沙盒要求（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 3.7 MCP|3.7 MCP]] — m×n → m+n 的复杂度论证；Client/Server 组件；Claude Desktop + GitHub 演示 ⚠️ 提出者误写为 Entropy（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 4.1 评估（Evals）|4.1 评估（Evals）]] — 从原型到小评估集；客观/主观 × 有无标准答案的 2×2 矩阵（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 4.2 错误分析与优先级|4.2 错误分析与优先级]] — trace/span 检查 + 电子表格量化；45% vs 5% 决定优先级（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 4.3 更多错误分析示例|4.3 更多错误分析示例]] — 发票（PDF 转文本 vs LLM 提取）与客服邮件（查询 75%/撰写 30%）归因演练（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 4.4 组件级评估|4.4 组件级评估]] — 单元测试 vs 集成测试；黄金标准列表 + F1；调完组件再跑端到端验证（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 4.6 如何改进识别到的问题|4.6 如何改进识别到的问题]] — 非 LLM 组件调参/换服务、LLM 组件四手段（提示词→换模型→拆任务→微调）；模型直觉四法（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 4.7 延迟与成本优化|4.7 延迟与成本优化]] — 先质量→再延迟→最后成本；计时基准与成本基准两类分析（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 4.8 开发过程总结|4.8 开发过程总结]] — 构建与分析并重；原型→初步评估→严谨分析→高效调优四阶段（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 5.1 工作流规划|5.1 工作流规划]] — 工具集 + LLM 出计划 + 逐步执行；工具粒度经验（3 个 vs 十几种 vs 裸数据库）（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 5.2 创建与执行 LLM 计划|5.2 创建与执行 LLM 计划]] — 用 JSON/XML 结构化输出保证下游可解析（description/tool/arguments）（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 5.3 结合代码执行的规划|5.3 结合代码执行的规划]] — code-as-action 优于 JSON plan；Pandas 生态与沙盒要求（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 5.5 多智能体工作流|5.5 多智能体工作流]] — 拆分的三条官方收益 + 突破上下文限制、节约成本两条补充（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 5.7 多智能体通信模式|5.7 多智能体通信模式]] — 线性/双层/多层/去中心四拓扑 + 对话模式；生产偏线性与双层（2026-09-13，来源 ×1）
+- [[01-Wiki/summaries/Agentic AI 课程 5.10 课程总结|5.10 课程总结]] — 五模块回顾 + 笔记作者的技术扩散与"迁移性思想"观点（2026-09-13，来源 ×1）
 
 ## 🏛️ 实体 (Entities) — `01-Wiki/entities/`
 
@@ -134,13 +166,16 @@ GROUP BY domain
 - [[01-Wiki/entities/zero2Agent|zero2Agent]] — 工程视角 AI Agent 开源教程系列（onefly.top），learn-agent-basic 01-17 + learn-agent-training 01-07 来源（2026-08-27，来源 ×24）
 - [[01-Wiki/entities/Cursor|Cursor]] — 代码库索引驱动 AI 编码 Agent（IDE 形态），8 并行 Agent+worktree，Coding Agent 成功梯队（2026-08-27，来源 ×2）
 - [[01-Wiki/entities/架构师AI杜|架构师AI杜]] — weekr.net 中文 AI 工程连载（第 N 天），MCP 三篇 + LangChain 两篇 + Agent 理论一篇，偏可运行代码 ⚠️ 含规范出入与旧版 API（2026-09-04，来源 ×6）
+- [[01-Wiki/entities/吴恩达|吴恩达（Andrew Ng）]] — [[01-Wiki/concepts/Agentic AI 工作流|Agentic AI]] 术语创造者、《Agentic AI》课程主讲、aisuite 作者（2026-09-13，来源 ×3）
+- [[01-Wiki/entities/aisuite|aisuite]] — 统一多家 LLM 调用语法的开源库，从 docstring 自动生成工具 JSON Schema（2026-09-13，来源 ×2）
+- [[01-Wiki/entities/smolagents|smolagents]] — HuggingFace 轻量 Agent 框架：`@tool` 一个装饰器 + CodeAgent（代码即行动）+ 偏爱双层/多层结构（2026-09-13，来源 ×3）
 
 ## 💡 概念 (Concepts) — `01-Wiki/concepts/`
 
 - [[01-Wiki/concepts/RAG|RAG]] — 先检索再生成的 LLM 架构，两阶段流程与方案对比（2026-09-11，来源 ×5）
 - [[01-Wiki/concepts/文本分块|文本分块]] — chunking 策略与分割器、关键参数（2026-09-11，来源 ×2）
 - [[01-Wiki/concepts/Document|Document]] — LangChain 统一文档对象：page_content + metadata（2026-07-31，来源 ×1）
-- [[01-Wiki/concepts/MCP|MCP]] — 模型上下文协议：外部能力标准化接入层 + 手写 Server 实现视角与官方规范出入对照表（2026-09-04，来源 ×2）
+- [[01-Wiki/concepts/MCP|MCP]] — 模型上下文协议：外部能力标准化接入层 + 手写 Server 实现视角与官方规范出入对照表 + **m×n→m+n 复杂度论证与 Client/Server 组件**（2026-09-13，来源 ×3）
 - [[01-Wiki/concepts/Agent Skills|Agent Skills]] — 程序性知识封装：渐进式披露三层架构、SKILL.md 规范（2026-07-31，来源 ×1）
 - [[01-Wiki/concepts/上下文工程|上下文工程]] — 推理阶段上下文策划：上下文腐蚀、GSSC、JIT、Context/State/Memory 区分、Skills 三层与 Status Bar（2026-08-27，来源 ×3）
 - [[01-Wiki/concepts/ReAct|ReAct]] — 思考-行动-观察循环范式，与 Plan-and-Solve/Reflection 对比；补规划方法谱系 CoT→Self-Consistency→ToT→GoT 与难度路由（2026-09-11，来源 ×2）
@@ -157,9 +192,9 @@ GROUP BY domain
 - [[01-Wiki/concepts/查询路由|查询路由]] — 按复杂度选策略：传统混合/图RAG/组合，RRF 融合与降级（2026-09-11，来源 ×2）
 - [[01-Wiki/concepts/实体关系抽取|实体关系抽取]] — LLM 抽取三元组→CSV→导入图库，图谱构建第一步（2026-08-01，来源 ×1）
 - [[01-Wiki/concepts/向量数据库|向量数据库]] — 高维向量存储检索、ANN 算法(HNSW/IVF/DiskANN)、与传统 DB 区别（2026-09-11，来源 ×3）
-- [[01-Wiki/concepts/AI Agent|AI Agent]] — 感知→决策→行动→记忆闭环、6 大模块、3 大协议、工程视角最小定义与 7 模块/Workflow 边界/生产断层 + 进阶章节导航 06-17 + 经典理论视角（四元组/三轴分类）（2026-09-04，来源 ×9）
-- [[01-Wiki/concepts/Tool Calling|Tool Calling]] — Agent 与大模型 API 交互核心：无状态 API、消息角色、工具调用闭环≥2请求、call ID 因果、并行/流式 + 工具设计八原则与参数验证五闸门 + 失败反馈策略/工具选择打分/Function Calling vs Toolformer（2026-09-11，来源 ×4）
-- [[01-Wiki/concepts/Agent 评估|Agent 评估]] — 四维度(完成率/效率/安全/鲁棒)、四评测方法(测试集/LLM-as-Judge/A-B/Red Teaming)、持续监控 + 训练评测四层指标/防泄露 + 鲁棒性对抗测试清单与 fail-safe（2026-09-11，来源 ×5）
+- [[01-Wiki/concepts/AI Agent|AI Agent]] — 感知→决策→行动→记忆闭环、6 大模块、3 大协议、工程视角最小定义与 7 模块/Workflow 边界/生产断层 + 进阶章节导航 06-17 + 经典理论视角（四元组/三轴分类）（2026-09-13，来源 ×10）
+- [[01-Wiki/concepts/Tool Calling|Tool Calling]] — Agent 与大模型 API 交互核心：无状态 API、消息角色、工具调用闭环≥2请求、call ID 因果、并行/流式 + 工具设计八原则与参数验证五闸门 + 失败反馈策略/工具选择打分/Function Calling vs Toolformer + **"请求-解析-执行-回填"四步与条件性调用判据**（2026-09-13，来源 ×7）
+- [[01-Wiki/concepts/Agent 评估|Agent 评估]] — 四维度(完成率/效率/安全/鲁棒)、四评测方法(测试集/LLM-as-Judge/A-B/Red Teaming)、持续监控 + 训练评测四层指标/防泄露 + 鲁棒性对抗测试清单与 fail-safe + **Evals 2×2 矩阵（客观/主观 × 有无标准答案）与 Rubric 打分**（2026-09-13，来源 ×10）
 - [[01-Wiki/concepts/Coding Agent|Coding Agent]] — 落地最成功 Agent 形态：外部验证器/代码即工具/结构化上下文/失败可控 + 三工程模式（2026-08-27，来源 ×1）
 - [[01-Wiki/concepts/Agent 自进化|Agent 自进化]] — 不改权重的运行时自改进：经验学习/工具创造/策略自优化 + 风险约束（2026-08-27，来源 ×1）
 - [[01-Wiki/concepts/异步 Agent 与事件驱动架构|异步 Agent 与事件驱动架构]] — 三异步模式、事件驱动、Safety Sidecar、工具三层隔离、Correlation ID（2026-09-11，来源 ×2）
@@ -170,7 +205,7 @@ GROUP BY domain
 - [[01-Wiki/concepts/Agent 训练数据|Agent 训练数据]] — 六类数据配比、能力偏移、模型越小越保守、质量>数量、数据飞轮（2026-08-27，来源 ×1）
 - [[01-Wiki/concepts/Agent 模型部署|Agent 模型部署]] — checkpoint 选择/量化(INT8 默认)/KV Cache/Agent Runtime/循环硬限制/灰度监控（2026-09-11，来源 ×2）
 - [[01-Wiki/concepts/Agent 训练环境|Agent 训练环境]] — 四平面闭环、环境契约、沙箱四硬规则、Verifier 隔离、数据回流保证据（2026-08-27，来源 ×1）
-- [[01-Wiki/concepts/单 Agent 与多 Agent|单 Agent 与多 Agent]] — 单 Agent 优先、三协作模式、上下文选择性共享、涌现行为 + 协作机制六形态与收敛容错机制（2026-09-11，来源 ×3）
+- [[01-Wiki/concepts/单 Agent 与多 Agent|单 Agent 与多 Agent]] — 单 Agent 优先、三协作模式、上下文选择性共享、涌现行为 + 协作机制六形态与收敛容错机制 + **四种通信拓扑（线性/双层/多层/去中心 + 对话模式）与"层级越多信息越失真"**（2026-09-13，来源 ×6）
 - [[01-Wiki/concepts/时空可组合性|时空可组合性]] — 动态组合双维度：可逆效应(时间)+响应式余效应(空间)、组件演算（2026-08-15，来源 ×1）
 - [[01-Wiki/concepts/Query Engine|Query Engine]] — LlamaIndex 检索+合成指挥中心：Retriever+Synthsizer、4 合成模式、请求生命周期（2026-08-19，来源 ×1）
 - [[01-Wiki/concepts/混合检索|混合检索]] — 向量(dense)+BM25(sparse) 协同，RRF 融合、权重调优（2026-09-11，来源 ×3）
@@ -186,6 +221,13 @@ GROUP BY domain
 - [[01-Wiki/concepts/RAG 评估|RAG 评估]] — 检索层(Recall@k/NDCG)与生成层(忠实度/相关性)分阶段指标、四类评估方法、**分层定位瓶颈**与 CI 回归（2026-09-11，来源 ×1）
 - [[01-Wiki/concepts/高级 RAG 范式|高级 RAG 范式]] — 迭代检索/自适应检索(Self-RAG)/纠偏检索(CRAG)/子问题分解四条演进线 + **成本控制是真正的工程难点**（2026-09-11，来源 ×1）
 - [[01-Wiki/concepts/Agent 可观测性|Agent 可观测性]] — Trace/Metrics/Logs 三支柱、回放·Diff·失败归因三能力、告警设计与工具组合选型（2026-09-11，来源 ×1）
+- [[01-Wiki/concepts/Agentic AI 工作流|Agentic AI 工作流]] — 多步骤迭代 vs 零样本一次性；自主性光谱；性能/并行/模块化三收益；模型+工具两构件；任务难度光谱（2026-09-13，来源 ×6）
+- [[01-Wiki/concepts/任务分解|任务分解]] — 四步方法（观察人→拆步→评估可行性→继续细分）；1/3/5 步对照；作为修 bug 的改进手段（2026-09-13，来源 ×3）
+- [[01-Wiki/concepts/反思模式|反思模式]] — 生成→评估→改进循环，硬编码更可靠；三层次（内省/模型分工/外部反馈）；提示词两条黄金法则；Rubric 判去留（2026-09-13，来源 ×6）
+- [[01-Wiki/concepts/错误分析|错误分析]] — trace/span 定位 + 表格量化频率定优先级；组件级评估（F1 + 黄金标准）；改进手段清单；四阶段流程第 3 阶段（2026-09-13，来源 ×5）
+- [[01-Wiki/concepts/代码执行|代码执行]] — 让模型写代码替代枚举工具；表达力/大库/实测更优；⚠️ `rm *.py` 事故 → 必须 Docker/E2B 沙盒（2026-09-13，来源 ×3）
+- [[01-Wiki/concepts/规划模式|规划模式]] — LLM 运行时自主决定工具调用序列；自然语言→JSON→代码即行动三级；工具粒度是难点；AI Coding 最成功（2026-09-13，来源 ×4）
+- [[01-Wiki/concepts/延迟与成本优化|延迟与成本优化]] — 优化顺序不可颠倒（质量→延迟→成本）；计时基准与成本基准两类；多 Agent 是隐性成本杠杆（2026-09-13，来源 ×3）
 
 ## 📋 待办与缺口 (Open Questions)
 
@@ -207,6 +249,13 @@ GROUP BY domain
 - **增量更新一致性校验的阈值标定**：影子检索对比新老文档分布时，指标阈值怎么定（2026-09-11）
 - **多租户检索隔离的框架级强制**：如何在数据访问层强制注入 `tenant_id` 过滤，而非靠开发者自觉（2026-09-11）
 - **多语言 RAG 的分语言评估基线**：低资源语言的实际退化幅度（2026-09-11）
+- **任务分解粒度的停止判据**：拆到几档收益最大，如何用成本/准确率曲线定拐点（2026-09-13）
+- **错误分析自动化归因**：用 LLM 给每个 span 打分能否替代人工逐条，成本与一致性如何（2026-09-13）
+- **Rubric 打分的权重与校准**：多维度如何加权、如何报告与人工标注的一致性（2026-09-13）
+- **code-as-action 的可审计性**：金融/医疗等强合规场景能否接受"模型自己写代码执行"（2026-09-13）
+- **代码执行沙盒选型**：Docker vs E2B 在隔离强度、启动延迟、依赖管理上的取舍（2026-09-13）
+- **多智能体收益的复现条件**：1.8 表中"多智能体 vs 单智能体"数据（人传 66%→73.8% 等）的原始来源与任务设置（2026-09-13）
+- **规划模式的越权防护**：运行时不可预知计划序列时，如何用权限/沙盒兜住（2026-09-13）
 
 ## 维护约定
 
